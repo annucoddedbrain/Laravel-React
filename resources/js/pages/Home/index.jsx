@@ -54,7 +54,7 @@ export default function Home(){
     return(
         <Layout>
             <Header />
-            <h1>Home</h1>
+            {/* <h1>Home</h1> */}
 
             <button onClick={addItem}>Add </button>
             <ul>
