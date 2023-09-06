@@ -5,7 +5,7 @@ import { MdOutlineHome, MdOutlineTempleHindu, MdOutlineForum, MdOutlinePlace, Md
 import { TbUserSearch } from 'react-icons/tb';
 import {Scrollbar} from 'smooth-scrollbar-react';
 
-import Dummy from '../../images/dummy.png';
+    import Dummy from '../../images/dummy.png';
 
 export default function Sidebar() {
 
@@ -30,32 +30,33 @@ export default function Sidebar() {
                     
                     <Nav as="ul" className="flex-column w-100">
                         <Nav.Item as="li">
-                            <Link to="/" className="nav-link d-flex"> <MdOutlineHome className="me-3 fs-4" />Home</Link>
+                            <Link to="/" className="nav-link d-flex"> <MdOutlineHome className="me-3 fs-4 icon" />Home</Link>
                         </Nav.Item>
                         <Nav.Item as="li">
-                            <Link className="nav-link d-flex"> <MdOutlineTempleHindu className="me-3 fs-4" />Temples</Link>
+                            <Link to="/temple" className="nav-link d-flex"> <MdOutlineTempleHindu className="me-3 fs-4 icon" />Temples</Link>
+                        </Nav.Item>
+                        
+                        <Nav.Item as="li">
+                            <Link className="nav-link d-flex" to="/nearby-temple"> <MdOutlinePlace className="me-3 fs-4 icon" />Nearby Temples</Link>
                         </Nav.Item>
                         <Nav.Item as="li">
-                            <Link className="nav-link d-flex"> <TbUserSearch className="me-3 fs-4" />Friends</Link>
+                            <Link className="nav-link d-flex" to="/friends"> <TbUserSearch className="me-3 fs-4 icon" />Friends</Link>
                         </Nav.Item>
                         <Nav.Item as="li">
-                            <Link className="nav-link d-flex"> <MdOutlinePlace className="me-3 fs-4" />Nearby Temples</Link>
+                            <Link className="nav-link d-flex" to="/groups"> <MdOutlineGroups className="me-3 fs-4 icon" />Groups</Link>
                         </Nav.Item>
                         <Nav.Item as="li">
-                            <Link className="nav-link d-flex"> <MdOutlineGroups className="me-3 fs-4" />Groups</Link>
-                        </Nav.Item>
-                        <Nav.Item as="li">
-                            <Link className="nav-link d-flex"> <MdOutlineLiveTv className="me-3 fs-4" />Live Aarti</Link>
+                            <Link className="nav-link d-flex" to="/live-aarti"> <MdOutlineLiveTv className="me-3 fs-4 icon" />Live Aarti</Link>
                         </Nav.Item>
                     </Nav>
                     
                 </Scrollbar>
                 <Nav as="ul" className="flex-column position-fixed bottom-0 mb-3">
                     <Nav.Item as="li" className="py-3 d-flex justify-content-center">
-                        <Link><MdOutlineHelpOutline className="fs-4"/></Link>
+                        <Link><MdOutlineHelpOutline className="fs-4 icon"/></Link>
                         </Nav.Item>
                     <Nav.Item as="li" className="py-3 d-flex justify-content-center">
-                        <Link><MdNotificationsNone className="fs-4"/></Link>
+                        <Link><MdNotificationsNone className="fs-4 icon"/></Link>
                         </Nav.Item>
                     <Nav.Item as="li" className="py-3 d-flex">
                         <Link to="/profile" className="img-circle"><img className="img-thumbnail" src={Dummy} /></Link>

@@ -1,5 +1,11 @@
 // Body
 $body-bg: #f8fafc;
+$color-accent: #f75e0a;
+$color-accent-dark: #da5107;
+$color-white: #ffffff;
+
+$color-gray: #ebecf8;
+$color-black: #131313;
 
 // Typography
 $font-family-sans-serif: 'Nunito', sans-serif;
@@ -8,6 +14,6 @@ $line-height-base: 1.6;
 
 @use "sass:math";
 
-@function abs( $number ){
-    @return( math.abs($number))
+@function abs($number ) {
+    @return(math.abs($number))
 }

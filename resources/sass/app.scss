@@ -1,5 +1,5 @@
 // Fonts
-@import url('https://fonts.bunny.net/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
 
 // Variables
 @import 'variables';
@@ -7,14 +7,9 @@
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
 
-:root {
-    --bs-body-bg: #fbfbfb;
-    --bs-body-bg-rgb: 251, 251, 251;
-}
+@import 'global';
 
-.h-100v {
-    height: 100vh;
-}
+
 
 #main {
     width: calc(100% - 250px);
@@ -45,7 +40,18 @@
     }
 }
 
+.icon{
+    color: black;
+}
+.header-button{
+    background-color: #f75e0a;
 
+    &.header-button:hover{
+        background-color: #fbfbfb;
+        color: #f75e0a;
+        border:1px solid #f75e0a;
+    }
+}
 .img-circle {
     width: 50px;
     height: 50px;
@@ -57,7 +63,9 @@
     align-items: center;
     justify-content: center;
 }
-
+.h-mx-360{
+    max-height: 360px;
+}
 @media screen and (max-width: 420px) {
     #main {
         width: 100%;

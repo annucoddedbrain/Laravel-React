@@ -1,0 +1,25 @@
+.profile {
+    color: #fff;
+    background-color: orangered;
+
+    &-image{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        overflow: hidden;
+        padding: 2px;
+        box-shadow: 2px 8px 8px #c9c9c9;
+    }
+}
+
+.test-selector {
+    background-color: aqua;
+}
+
+.wtu{
+    min-height: 10rem;
+}
+
+.camera-orange path{
+    fill: #f75e0a
+}

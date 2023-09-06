@@ -13,8 +13,8 @@ function Header() {
                 </InputGroup>
             </Form>
             <Nav as="ul" className="d-flex align-items-center gap-5">
-                <Nav.Item as="li"><Link><MdOutlineForum className="fs-4"/></Link></Nav.Item>
-                <Nav.Item as="li"><Link className="btn btn-primary"> + Add Temple</Link></Nav.Item>
+                <Nav.Item as="li"><Link><MdOutlineForum className="fs-4 icon"/></Link></Nav.Item>
+                <Nav.Item as="li"><Link className="btn btn-danger header-button"> + Add Temple</Link></Nav.Item>
             </Nav>
         </header>
     )

@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Profile from "./pages/Profile";
+import Temple from "./pages/Temple";
 
 
 function Main() {
@@ -13,6 +14,7 @@ function Main() {
             <Route path="/login" exact={true} element={<Login />} />
             <Route path="/" exact={true} element={<Home />} />
             <Route path="/profile" exact={true} element={<Profile />} />
+            <Route path="/temple" exact={true} element={<Temple />} />
 
             <Route path="*" element={<NotFound />} />
         </Routes>

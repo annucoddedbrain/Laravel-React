@@ -1,0 +1,63 @@
+body {
+    font-family: 'Inknut Antiqua', serif;
+}
+
+:root {
+    --bs-body-bg: #fbfbfb;
+    --bs-body-bg-rgb: 251, 251, 251;
+}
+
+.h-100v {
+    height: 100vh;
+}
+
+
+@for $i from 1 through 9 {
+    $w : $i * 100;
+
+    .fw-#{$w} {
+        font-weight: $w !important;
+    }
+}
+
+.img-responsive {
+    width: 100%;
+    max-width: 100%;
+}
+
+.line-height-1 {
+    line-height: 1;
+}
+
+.shadow-bottom {
+    box-shadow: 1px 4px 4px #cecece;
+}
+
+.btn-accent {
+    background-color: $color-accent;
+    color: $color-white;
+    border-color: $color-accent-dark ;
+    font-size: 0.7rem;
+    line-height: 2.3;
+
+    &:hover {
+        background-color: $color-white;
+        border-color: $color-accent;
+        color: $color-accent;
+    }
+}
+
+.btn-gray {
+    background-color: $color-gray;
+    color: $color-black;
+    font-size: 0.7rem;
+    line-height: 2.3;
+    border-width: 3px;
+
+    &:hover {
+        background-color: $color-white;
+        border-color: $color-gray;
+        border-width: 3px;
+        color: $color-black;
+    }
+}
