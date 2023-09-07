@@ -69,7 +69,7 @@ export default function Profile() {
                 </Row>
 
                 <Row>
-                    <Col xs={5}>
+                    <Col xs={4}>
                         <Card className="w-100 border-0 rounded-4 shadow-bottom overflow-hidden">
                             <Card.Body className="p-0">
                                 <div xs={12} className="px-5">
@@ -85,75 +85,124 @@ export default function Profile() {
                                     </Row>
                                     <Row className="mt-4">
                                         <Col xs={3}>
-                                            <div className="profile-image h-60 w-60">
+                                            <div className="profile-image h-60 w-60 group-img">
                                                 <img src="/images/dummy.png" className="img-responsive" />
                                             </div>
                                         </Col>
                                         <Col xs={6} className="d-flex align-items-center">
                                             <div className="d-flex flex-column justify-content-start profile-info">
-                                                <h5 className="profile-name mb-1">Sameer Tomar</h5>
+                                                <h6 className="profile-name mb-1">Hindu Samhati</h6>
                                                 <p className="fw-600 m-0 p-0 profile-username text-start text-muted">@sameer</p>
                                             </div>
                                         </Col>
                                         <Col xs={3} className="d-flex align-items-center justify-content-center">
-                                            <Link className="btn btn-accent w-500 ">Join</Link>
+                                            <Link className="btn join col w-500 ">Join</Link>
                                         </Col>
                                     </Row>
                                     <Row className="mt-3">
                                         <Col xs={3}>
-                                            <div className="profile-image h-60 w-60">
+                                            <div className="profile-image h-60 w-60 group-img">
                                                 <img src="/images/dummy.png" className="img-responsive" />
                                             </div>
                                         </Col>
                                         <Col xs={6} className="d-flex align-items-center">
                                             <div className="d-flex flex-column justify-content-start profile-info">
-                                                <h5 className="profile-name mb-1">Sameer Tomar</h5>
+                                                <h6 className="profile-name mb-1">Kattar Hindu Samaj</h6>
                                                 <p className="fw-600 m-0 p-0 profile-username text-start text-muted">@sameer</p>
                                             </div>
                                         </Col>
                                         <Col xs={3} className="d-flex align-items-center justify-content-center">
-                                            <Link className="btn btn-accent w-500 ">Join</Link>
+                                            <Link className="btn join col w-500 ">Join</Link>
                                         </Col>
                                     </Row>
                                     <Row className="mt-3">
                                         <Col xs={3}>
-                                            <div className="profile-image h-60 w-60">
+                                            <div className="profile-image h-60 w-60 group-img">
                                                 <img src="/images/dummy.png" className="img-responsive" />
                                             </div>
                                         </Col>
                                         <Col xs={6} className="d-flex align-items-center">
                                             <div className="d-flex flex-column justify-content-start profile-info">
-                                                <h5 className="profile-name mb-1">Sameer Tomar</h5>
+                                                <h6 className="profile-name mb-1">Sanatan Dharm humara </h6>
                                                 <p className="fw-600 m-0 p-0 profile-username text-start text-muted">@sameer</p>
                                             </div>
                                         </Col>
                                         <Col xs={3} className="d-flex align-items-center justify-content-center">
-                                            <Link className="btn btn-accent w-500 ">Join</Link>
+                                            <Link className="btn join col w-500 ">Join</Link>
                                         </Col>
                                     </Row>  
-                                      <Row className="mt-3">
+                                    <Row className="mt-3">
                                         <Col xs={3}>
-                                            <div className="profile-image h-60 w-60">
+                                            <div className="profile-image h-60 w-60 group-img">
                                                 <img src="/images/dummy.png" className="img-responsive" />
                                             </div>
                                         </Col>
                                         <Col xs={6} className="d-flex align-items-center">
                                             <div className="d-flex flex-column justify-content-start profile-info">
-                                                <h5 className="profile-name mb-1">Sameer Tomar</h5>
+                                                <h6 className="profile-name mb-1">हिन्दू संघ</h6>
                                                 <p className="fw-600 m-0 p-0 profile-username text-start text-muted">@sameer</p>
                                             </div>
                                         </Col>
                                         <Col xs={3} className="d-flex align-items-center justify-content-center">
-                                            <Link className="btn btn-accent w-500 ">Join</Link>
+                                            <Link className="btn join col w-500 ">Join</Link>
                                         </Col>
                                     </Row>
-
-                               
-
+                                    <Row className="mt-3">
+                                        <Col xs={3}>
+                                            <div className="profile-image h-60 w-60 group-img">
+                                                <img src="/images/dummy.png" className="img-responsive" />
+                                            </div>
+                                        </Col>
+                                        <Col xs={6} className="d-flex align-items-center">
+                                            <div className="d-flex flex-column justify-content-start profile-info">
+                                                <h6 className="profile-name mb-1">Jai Bholenath</h6>
+                                                <p className="fw-600 m-0 p-0 profile-username text-start text-muted">@sameer</p>
+                                            </div>
+                                        </Col>
+                                        <Col xs={3} className="d-flex align-items-center justify-content-center">
+                                            <Link className="btn join col w-500 ">Join</Link>
+                                        </Col>
+                                    </Row>
+                                    <Row className="mt-3">
+                                        <Col xs={3}>
+                                            <div className="profile-image h-60 w-60 group-img">
+                                                <img src="/images/dummy.png" className="img-responsive" />
+                                            </div>
+                                        </Col>
+                                        <Col xs={6} className="d-flex align-items-center">
+                                            <div className="d-flex flex-column justify-content-start profile-info">
+                                                <h6 className="profile-name mb-1">ब्राह्मण भूमिहार एकता मंच </h6>
+                                                <p className="fw-600 m-0 p-0 profile-username text-start text-muted">@sameer</p>
+                                            </div>
+                                        </Col>
+                                        <Col xs={3} className="d-flex align-items-center justify-content-center">
+                                            <Link className="btn join col w-500 ">Join</Link>
+                                        </Col>
+                                    </Row>
                                 </div>
-
                             </Card.Body>
                         </Card>
+
+                        <div className="mt-5">
+                        <h5>Tags</h5>
+                        <Link className="btn col w-500 tag-btns rounded-5 m-2">#temple</Link>
+                        <Link className="btn col w-500 tag-btns rounded-5 m-2">#mandir</Link>
+                        <Link className="btn col w-500 tag-btns rounded-5 m-2">#sanatan-lok</Link>
+                        <Link className="btn col w-500 tag-btns rounded-5 m-2">#sanatan</Link>
+                        <Link className="btn col w-500 tag-btns rounded-5 m-2">#religion</Link>
+                        <Link className="btn col w-500 rounded-5 m-2 tag-btns">#belief-in-god</Link>
+                        </div>
+                    </Col>
+
+                    <Col xs={4}>
+                    <div>
+                        <img src="/images/temp2.jpg" className="w-100 rounded-4 shadow-bottom"/>
+                    </div>
+                    </Col>
+                    <Col xs={4}>
+                    <div >
+                        <img src="/images/temp2.jpg" className=" rounded-4 w-100 shadow-bottom"/>
+                    </div>
                     </Col>
                 </Row>
             </Container>
