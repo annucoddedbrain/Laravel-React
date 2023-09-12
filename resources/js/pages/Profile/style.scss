@@ -42,3 +42,62 @@
 .tag-btns:hover{
     background-color: #ebecf8;
 }
+
+
+.sticky {
+    transition: all .3s linear;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    background: #fff;
+    top: 0;
+    transform: rotateX(90deg) {
+        origin: top;
+    };
+    
+    // margin-top: -250px;
+}
+
+.sticky-profile-header .sticky {
+    transform: rotateX(0);
+    animation: shaken-top 1s linear .35s;
+}
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+  }
+
+  @include keyframes(shaken-top){
+    0%{
+        transform: rotateX( 0deg );
+    }
+    10%{
+        transform: rotateX( -39deg );
+    }
+    25%{
+        transform: rotateX( 27deg );
+    }
+    50%{
+        transform: rotateX( -27deg );
+    }
+    75%{
+        transform: rotateX( 15deg );
+    }
+    90%{
+        transform: rotateX(-15deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+    }
+}

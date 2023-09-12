@@ -1,0 +1,34 @@
+@media screen and (max-width: 420px) {
+    #main {
+        width: 100%;
+    }
+    .mobile-menu:not(.show){
+        .aside {
+            margin-left:  -250px ;
+        }
+    }
+
+    .mobile-menu {
+        position: fixed;
+
+        &:not(.show)::after{
+            transform: scale( 0, 1);
+            transform-origin: left;
+        }
+
+        &::after {
+            content: '';
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgb(0 0 0 / 90%);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: transform .3s ease-in;
+            transform: scale( 1, 1);
+            transform-origin: left;
+        }
+    }
+}   
