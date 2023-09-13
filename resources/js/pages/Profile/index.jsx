@@ -136,59 +136,107 @@ export default function Profile() {
                     </Col>
 
                     <Col xs={7} className="gap-3 count-3 mossonary">
-                    <div>
-                        <img src="/images/temp2.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                    </div>
-                    <div>
-                        <img src="/images/temp5.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                    </div>
+                   <Link>
+                        <div>
+                            <img src="/images/temp5.jpg" className="w-100 rounded-4 shadow-bottom"/>
+                        </div>
+                    </Link>
                     
-                    <div>
-                        <img src="/images/temp2.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                    </div>
-                    <div>
-                        <img src="/images/temp5.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                    </div>
-                    
-                    
-                    <div >
-                        <img src="/images/temp4.jpg" className=" rounded-4 w-100 shadow-bottom"/>
-                    </div>
-                    <div>
-                        <img src="/images/temp6.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                    </div>
-                    <div>
-                        <img src="/images/temp7.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                    </div>
-                    <div>
-                        <img src="/images/temp3.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                    </div>
-                    <div>
-                        <img src="/images/temp2.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                    </div>
-                    <div>
-                        <img src="/images/temp5.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                    </div>
+                    <Link>
+                        <div>
+                            <img src="/images/temp3.jpg" className="w-100 rounded-4 shadow-bottom"/>
+                        </div>
+                    </Link>
+
+                    <Link>
+                        <div>
+                            <img src="/images/temp4.jpg" className="w-100 rounded-4 shadow-bottom"/>
+                        </div>
+                    </Link>
                    
-                    <div>
-                        <img src="/images/temp3.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                    </div>
-                    <div>
-                        <img src="/images/temp3.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                    </div>
-                    <div>
-                        <img src="/images/temp2.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                    </div>
-                    <div>
-                        <img src="/images/temp5.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                    </div>
+                    <Link>
+                        <div>
+                            <img src="/images/temp5.jpg" className="w-100 rounded-4 shadow-bottom"/>
+                        </div>
+                    </Link>
                    
-                    <div>
-                        <img src="/images/temp3.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                    </div>
-                    <div>
-                        <img src="/images/temp3.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                    </div>
+                    <Link>
+                        <div>
+                            <img src="/images/temp4.jpg" className="w-100 rounded-4 shadow-bottom"/>
+                        </div>
+                    </Link>
+                   
+                    <Link>
+                        <div>
+                            <img src="/images/temp6.jpg" className="w-100 rounded-4 shadow-bottom"/>
+                        </div>
+                    </Link>
+                    
+                    <Link>
+                        <div>
+                            <img src="/images/temp3.jpg" className="w-100 rounded-4 shadow-bottom"/>
+                        </div>
+                    </Link>
+                   
+                    <Link>
+                        <div>
+                            <img src="/images/temp7.jpg" className="w-100 rounded-4 shadow-bottom"/>
+                        </div>
+                    </Link>
+                    <Link>
+                        <div>
+                            <img src="/images/temp5.jpg" className="w-100 rounded-4 shadow-bottom"/>
+                        </div>
+                    </Link>
+                   
+                    <Link>
+                        <div>
+                            <img src="/images/temp2.jpg" className="w-100 rounded-4 shadow-bottom"/>
+                        </div>
+                    </Link>
+                   
+                    <Link>
+                        <div>
+                            <img src="/images/temp5.jpg" className="w-100 rounded-4 shadow-bottom"/>
+                        </div>
+                    </Link>
+                   
+                    <Link>
+                        <div>
+                            <img src="/images/temp3.jpg" className="w-100 rounded-4 shadow-bottom"/>
+                        </div>
+                    </Link>
+                    
+                    <Link>
+                        <div>
+                            <img src="/images/temp5.jpg" className="w-100 rounded-4 shadow-bottom"/>
+                        </div>
+                    </Link>
+                
+                    <Link>
+                        <div>
+                            <img src="/images/temp2.jpg" className="w-100 rounded-4 shadow-bottom"/>
+                        </div>
+                    </Link>
+                
+                    <Link>
+                        <div>
+                            <img src="/images/temp3.jpg" className="w-100 rounded-4 shadow-bottom"/>
+                        </div>
+                    </Link>
+                
+                    <Link>
+                        <div>
+                            <img src="/images/temp5.jpg" className="w-100 rounded-4 shadow-bottom"/>
+                        </div>
+                    </Link>
+                  
+                    <Link>
+                        <div>
+                            <img src="/images/temp2.jpg" className="w-100 rounded-4 shadow-bottom"/>
+                        </div>
+                    </Link>
+ 
                     </Col>
                 </Row>
             </Container>
