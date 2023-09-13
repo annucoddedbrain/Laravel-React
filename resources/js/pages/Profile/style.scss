@@ -47,8 +47,8 @@
 .sticky {
     transition: all .3s linear;
     position: fixed;
-    z-index: 2;
-    width: 100%;
+    z-index: 999;
+    width: -webkit-fill-available;
     background: #fff;
     top: 0;
     transform: rotateX(90deg) {
@@ -60,9 +60,13 @@
 
 .sticky-profile-header .sticky {
     transform: rotateX(0);
-    animation: shaken-top 1s linear .35s;
+    // animation: shaken-top 1s linear .35s;
 }
 
+.msg{
+    background-color: #f75e0a;
+    color: #fff
+}
 @mixin keyframes($name) {
     @-webkit-keyframes #{$name} {
         @content;

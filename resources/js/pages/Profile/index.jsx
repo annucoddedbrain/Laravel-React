@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Card } from "react-bootstrap";
-import { MdMoreVert, MdOutlineGroups } from "react-icons/md";
+import { MdMoreVert, MdOutlineGroups, MdShare } from "react-icons/md";
 import { FcCamera } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import GroupSuggestion from "../../components/GroupSuggestion";
@@ -26,16 +26,29 @@ export default function Profile() {
     return (
         <Layout>
             <Container fluid className="pt-3">
-                <Row className="sticky py-5 w-100 shadow rounded-4">
-                    {/* <Col>Sticky Header</Col> */}
-                    <Col xs={6} className="pb-2 d-flex align-items-center">
-                                            <Link className="d-flex text-muted text-decoration-none gap-2"><FcCamera className="camera-orange fs-4" /><span>Photos/Video</span></Link>
-                                        </Col>
-                                        <Col xs={5} className="d-flex justify-content-evenly">
-                                            <Link className="btn btn-accent rounded-5">+Add Post</Link>
-                                            <Link className="btn btn-gray rounded-5">+Add Temple</Link>
-                                        </Col>
-                </Row>
+                <div className="sticky py-3 shadow rounded-4 px-3">
+                    <Row className="flex-fill">
+                        <Col xs={3} className="d-flex justify-content-between align-items-center">
+                            <div className="profile-image">
+                                <img src="/images/dummy.png" className="img-responsive" />
+                            </div>
+                            <div>
+                                <h5 className="profile-name mb-1">Sameer Tomar</h5>
+                                <p className="fw-600 m-0 p-0 profile-username text-start text-muted">@sameer</p>
+                            </div>
+                        </Col>
+                        <Col xs={9} className=" d-flex justify-content-end align-items-center gap-4">
+                        <Link className="img-circle text-body btn-gray border h-auto w-auto"><MdMoreVert className="fs-2 p-1"/></Link>
+                        <Link className="img-circle text-body btn-gray border h-auto w-auto"><MdShare className ="fs-2 p-1"/></Link>
+                        <Link className="btn btn-gray h-auto  rounded-5 m-2">Temple Post</Link>
+                        <Link className="btn btn-gray h-auto  rounded-5 m-2">Follow</Link>
+                        <Link className="btn btn-accent h-auto  rounded-5 m-2 ">Message</Link>
+                        {/* <Link className="img-circle text-body bg-dark-subtle border h-50 w-auto rounded-1 p-2 text-decoration-none">Follow</Link> */}
+                        {/* <Link className="img-circle text-body bg-dark-subtle border h-50 w-auto rounded-1 p-2 text-decoration-none ">Message</Link> */}
+                        </Col>
+                    </Row>
+                </div>
+                
                 <Row className="mb-5">
                     <Col xs={12}>
                         <Card className="w-100 border-0 rounded-4 shadow-bottom overflow-hidden">
@@ -86,7 +99,7 @@ export default function Profile() {
 
                 <Row>
                     <Col xs={5}>
-                        <Card className="w-100 border-0 rounded-4 shadow-bottom overflow-hidden pb-3">
+                        <Card className="w-100 border-0 rounded-4 shadow-bottom overflow-hidden py-3">
                             <Card.Body className="p-0">
                                 <div xs={12} className="px-5">
                                     <Row>

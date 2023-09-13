@@ -52,12 +52,10 @@ body {
     color: $color-black;
     font-size: 0.7rem;
     line-height: 2.3;
-    border-width: 3px;
 
     &:hover {
         background-color: $color-white;
         border-color: $color-gray;
-        border-width: 3px;
         color: $color-black;
     }
 }
