@@ -13,11 +13,15 @@ Flexbox and floats are used as a fallback so that browsers which don't support g
 
 /* Gallery Section */
 
+.gallery{
+    margin-bottom: 1rem;
+}
 
 .gallery-item {
     position: relative;
     color: #fff;
     cursor: pointer;
+    margin-bottom: 0;
 }
 
 .gallery-item:hover .gallery-item-info,
