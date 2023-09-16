@@ -9,7 +9,6 @@ import Temple from "./pages/Temple";
 import Chat from "./pages/Chat";
 import Community from "./pages/community";
 import Friends from "./pages/Friends";
-import Notification from "./pages/Notification";
 import Groups from "./pages/Groups";
 
 
@@ -24,7 +23,6 @@ function Main() {
             <Route path="/groups" exact={true} element={<Groups />} />
             <Route path="/friends" exact={true} element={<Friends />} />
             <Route path="/community" exact={true} element={<Community />} />
-            <Route path="/notification" exact={true} element={<Notification/>} />
 
             <Route path="*" element={<NotFound />} />
         </Routes>
