@@ -65,7 +65,7 @@ export default function Chat() {
                             </Col>
 
                             <Col xs={4}>
-                                <p className="mt-4 mx-4 ">2:30 pm</p>
+                                <p className="mt-4 mx-4">2:30 pm</p>
                             </Col>
                         </Row>
 
@@ -84,7 +84,7 @@ export default function Chat() {
                             </Col>
 
                             <Col xs={4}>
-                                <p className="mt-4 mx-4 ">2:30 pm</p>
+                                <p className="mt-4 mx-4">2:30 pm</p>
                             </Col>
                         </Row>
 
@@ -103,7 +103,7 @@ export default function Chat() {
                             </Col>
 
                             <Col xs={4}>
-                                <p className="mt-4 mx-4 ">2:30 pm</p>
+                                <p className="mt-4 mx-4">2:30 pm</p>
                             </Col>
                         </Row>
 
@@ -122,7 +122,7 @@ export default function Chat() {
                             </Col>
 
                             <Col xs={4}>
-                                <p className="mt-4 mx-4 ">2:30 pm</p>
+                                <p className="mt-4 mx-4">2:30 pm</p>
                             </Col>
                         </Row>
 
@@ -141,7 +141,7 @@ export default function Chat() {
                             </Col>
 
                             <Col xs={4}>
-                                <p className="mt-4 mx-4 ">2:30 pm</p>
+                                <p className="mt-4 mx-4">2:30 pm</p>
                             </Col>
                         </Row>
 
@@ -160,7 +160,7 @@ export default function Chat() {
                             </Col>
 
                             <Col xs={4}>
-                                <p className="mt-4 mx-4 ">2:30 pm</p>
+                                <p className="mt-4 mx-4">2:30 pm</p>
                             </Col>
                         </Row>
 
@@ -179,7 +179,7 @@ export default function Chat() {
                             </Col>
 
                             <Col xs={4}>
-                                <p className="mt-4 mx-4 ">2:30 pm</p>
+                                <p className="mt-4 mx-4">2:30 pm</p>
                             </Col>
                         </Row>
 
@@ -198,7 +198,7 @@ export default function Chat() {
                             </Col>
 
                             <Col xs={4}>
-                                <p className="mt-4 mx-4 ">2:30 pm</p>
+                                <p className="mt-4 mx-4">2:30 pm</p>
                             </Col>
                         </Row>
 
@@ -217,7 +217,7 @@ export default function Chat() {
                             </Col>
 
                             <Col xs={4}>
-                                <p className="mt-4 mx-4 ">2:30 pm</p>
+                                <p className="mt-4 mx-4">2:30 pm</p>
                             </Col>
                         </Row>
 
@@ -289,23 +289,6 @@ export default function Chat() {
                                     </div>
                             </div>
                         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     </Col>
                 </Row>
             </Container>

@@ -9,6 +9,7 @@ import Temple from "./pages/Temple";
 import Chat from "./pages/Chat";
 import Community from "./pages/community";
 import Friends from "./pages/Friends";
+import Addtemple from "./pages/Addtemple";
 
 
 function Main() {
@@ -21,6 +22,7 @@ function Main() {
             <Route path="/chat" exact={true} element={<Chat />} />
             <Route path="/community" exact={true} element={<Community />} />
             <Route path="/Friends" exact={true} element={<Friends />} />
+            <Route path="/Addtemple" exact={true} element={<Addtemple />} />
 
             <Route path="*" element={<NotFound />} />
         </Routes>

@@ -33,7 +33,7 @@ export default function Home() {
         },
         content: <><p>Kedarnath Temple is a Hindu temple, one of the twelve jyotirlinga of Shiva. The temple is located on the Garhwal Himalayan range near the Mandakini river</p>
             <div>
-                <img src="/images/kedarnath1.jpg" />
+                <img src="/images/kedarnath1.jpg"/>
             </div></>
     }
 
