@@ -56,7 +56,8 @@ export default function Sidebar() {
                         <Link><MdOutlineHelpOutline className="fs-4 icon"/></Link>
                         </Nav.Item>
                     <Nav.Item as="li" className="py-3 d-flex justify-content-center">
-                        <Link><MdNotificationsNone className="fs-4 icon"/></Link>
+                        {/* <Link to="/notification" ><MdNotificationsNone className="fs-4 icon" /></Link> */}
+                        <Link to="/notification" onClick={() => setShow(true)}><MdNotificationsNone className="fs-4 icon" /></Link>
                         </Nav.Item>
                     <Nav.Item as="li" className="py-3 d-flex">
                         <Link to="/profile" className="img-circle"><img className="img-thumbnail" src={Dummy} /></Link>
