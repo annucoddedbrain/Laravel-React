@@ -1,13 +1,16 @@
 import React from "react";
-import './style.scss';
-import Header from "../../components/Header";
+import "./style.scss";
 import Layout from "../../components/Layout";
 
-export default function Friends(){
-    return (
+
+
+
+export default function Chat() {
+    return(
         <Layout>
-            <Header/>
-            Friends
+
         </Layout>
     )
 }
+
+

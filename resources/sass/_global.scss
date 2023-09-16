@@ -74,8 +74,9 @@ body {
         top: 1rem;
         left: 1rem;
         right: 1rem;
+        bottom: 2rem;
     };
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .aside {
@@ -96,6 +97,7 @@ body {
 .icon{
     color: black;
 }
+
 .header-button{
     background-color: #f75e0a;
 
@@ -164,3 +166,55 @@ body {
     }
 }
 
+
+.post-body img{
+    width: 100%;
+    max-width: 100%
+}
+
+
+.comment-box{
+
+    position: relative;
+    padding: 8px 12px;
+    margin-top: 10px;
+    border: {
+        radius: 50px;
+    };
+
+    & .comment-writer{
+        position: relative;
+    }
+
+    & .comment-input{
+        position: relative;
+        user-select: text;
+        -webkit-user-select: text;
+        white-space: pre-wrap;
+        word-break: break-word;
+        outline: none;
+        width: 100%;
+        cursor: text;
+
+        & p {
+            margin: 0;
+        }
+    }
+
+
+
+    & .comment-placeholder{
+        position: absolute;
+
+        color: var(--bs-secondary);
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        user-select: none;
+        -webkit-user-select: none;
+        width: 100%;
+    }
+
+}

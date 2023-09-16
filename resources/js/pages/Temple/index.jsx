@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import "./style.scss";
 import Header from "../../components/Header";
 import Layout from "../../components/Layout";
-import { Row, Col, Button, Modal, ModalHeader } from "react-bootstrap";
+import { Row, Col, Button, Modal, ModalHeader, Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { MdMoreHoriz } from "react-icons/md";
-import { BiHeart} from "react-icons/bi";
+import { BiHeart } from "react-icons/bi";
 import { FiBookmark, FiSend, FiSmile } from "react-icons/fi";
 import { FiMessageCircle } from "react-icons/fi";
-import { AiOutlineClose} from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
 import GalleryItem from "../../components/GalleryItem";
 
 export default function Temple() {
@@ -22,7 +22,7 @@ export default function Temple() {
         {
             src: '/images/temp1.jpg',
             alt: '',
-           
+
         },
         {
             src: '/images/temp2.jpg',
@@ -116,6 +116,28 @@ export default function Temple() {
         <Layout>
             <Header />
             <Row>
+                <Col xs={12} className="d-flex gap-5  mb-4 mx-5">
+                    <Link className="btn bg-dark-subtle shadow-bottom"> Near By Temple</Link>
+                    <Link >
+                        <Dropdown>
+                            <Dropdown.Toggle className="btn bg-dark-subtle border text-dark shadow-bottom ">
+                                Location
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu>
+                                <Dropdown.Item href="#/action-1">Delhi</Dropdown.Item>
+                                <Dropdown.Item href="#/action-2">Uttar Pardesh</Dropdown.Item>
+                                <Dropdown.Item href="#/action-3">Pune</Dropdown.Item>
+                                <Dropdown.Item href="#/action-3">Mumbai</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
+                    </Link>
+                    {/* <Link className="btn bg-dark-subtle shadow-bottom"> Delhi</Link>
+                    <Link className="btn bg-dark-subtle shadow-bottom"> Uttar Pardesh</Link>
+                    <Link className="btn bg-dark-subtle shadow-bottom"> Pune</Link> */}
+                </Col>
+            </Row>
+            <Row>
                 <Col xs={12} className="gap-3 count-3 mossonary">
                     {shuffle(images).map((image, k) => <GalleryItem image={image} name="Hanuman Mandir" loaction="Faridabad,Haryana" onClick={handleShow} key={k} />)}
                     {shuffle(images).map((image, k) => <GalleryItem image={image} name="Prem Mandir" loaction="Faridabad,Haryana" onClick={handleShow} key={k} />)}
@@ -123,9 +145,9 @@ export default function Temple() {
 
                 </Col>
             </Row>
-            
+
             <Modal show={show} onHide={handleClose}>
-      
+
                 <Modal.Body >
                     <Row>
                         <Col xs={6}>
@@ -135,23 +157,23 @@ export default function Temple() {
                         </Col>
                         <Col xs={6}>
                             <div className="align-items-center border-bottom d-flex pb-2 justify-content-evenly">
-                               <Row className="w-100">
-                                <Col xs={10} className="d-flex">
-                                <div className="profile-image">
-                                    <img src="/images/dummy.png" className="img-responsive " />
-                                </div>
-                                <div className="d-flex gap-3 align-items-center mx-3">
-                                    <p className="profile-name mb-1 gap-2">Sameer </p>
-                                    <Link className="text-decoration-none"> <p className="m-0">Follow</p></Link>
-                                </div>
-                                
-                                </Col>
-                                <Col xs={2}>
-                                <div className="mx-4 my-3">
-                                    <Link className="text-body mx-4"> <MdMoreHoriz /> </Link>
-                                </div>
-                                </Col>
-                               </Row>
+                                <Row className="w-100">
+                                    <Col xs={10} className="d-flex">
+                                        <div className="profile-image">
+                                            <img src="/images/dummy.png" className="img-responsive " />
+                                        </div>
+                                        <div className="d-flex gap-3 align-items-center mx-3">
+                                            <p className="profile-name mb-1 gap-2">Sameer </p>
+                                            <Link className="text-decoration-none"> <p className="m-0">Follow</p></Link>
+                                        </div>
+
+                                    </Col>
+                                    <Col xs={2}>
+                                        <div className="mx-4 my-3">
+                                            <Link className="text-body mx-4"> <MdMoreHoriz /> </Link>
+                                        </div>
+                                    </Col>
+                                </Row>
                             </div>
                             <div className="border-bottom ">
                                 <div className="align-items-center  d-flex gap-3 my-3">
@@ -175,7 +197,7 @@ export default function Temple() {
                             <div className="my-3 border-bottom ">
                                 <Row>
                                     <Col xs={10}>
-                                       <Link className="text-body text-decoration-none"> <BiHeart className="fs-4" /> </Link>
+                                        <Link className="text-body text-decoration-none"> <BiHeart className="fs-4" /> </Link>
                                         <Link className="text-body text-decoration-none"> <FiMessageCircle className="fs-4 mx-3" /> </Link>
                                         <Link className="text-body text-decoration-none"> <FiSend className="fs-4 " /> </Link>
                                         <p>16,500 Likes</p>
@@ -186,8 +208,8 @@ export default function Temple() {
                                 </Row>
                             </div>
                             <div className="d-flex gap-2">
-                            <FiSmile className="fs-4" />
-                            <p>Add a comment</p>
+                                <FiSmile className="fs-4" />
+                                <p>Add a comment</p>
                             </div>
                         </Col>
                     </Row>

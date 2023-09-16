@@ -31,7 +31,7 @@ export default function GroupSuggestion({name}) {
             </div>
         </Col>
         <Col xs={3} className="d-flex align-items-center justify-content-center">
-            <Link className="btn join col w-100v h-50 p-1">Join</Link>
+            <Link className="btn join col w-100v h-50 p-0">Join</Link>
         </Col>
     </Row>
     )
