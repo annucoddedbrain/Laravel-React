@@ -1,0 +1,57 @@
+
+
+.switch{
+    color: orangered;
+}
+
+.Box{
+    background-color: #D9D9D9;
+    border-radius: 15px;
+}
+.mySwiper{
+
+    .swiper-slide {
+        min-height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid;
+        border-radius: 8px;
+    }
+}
+
+.live-circle{
+    position: relative;
+    padding-left: 10px;
+
+    &::before{
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background-color: rgb(11, 97, 11);
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        border-radius: 50%;
+
+    }
+}
+
+.size{
+    min-height: 100px;
+    min-width: 100px;
+    border-radius: 8px;
+}
+
+.Tname{
+    text-align: center;
+}
+
+.icon{
+    border-radius: 8px;
+}
+
+.kedarnath{
+    border-radius: 5px;
+}
