@@ -35,7 +35,7 @@ export default function Sidebar() {
                         <Nav.Item as="li">
                             <Link to="/temple" className="nav-link d-flex"> <MdOutlineTempleHindu className="me-3 fs-4 icon" /><b className="text">Temples</b></Link>
                         </Nav.Item>
-                        
+
                         <Nav.Item as="li">
                             <Link className="nav-link d-flex" to="/friends"> <TbUserSearch className="me-3 fs-4 icon" /><b className="text">Friends</b></Link>
                         </Nav.Item>
@@ -60,11 +60,11 @@ export default function Sidebar() {
                 </Scrollbar>
                 <Nav as="ul" className="flex-column position-fixed bottom-0 mb-3">
                     <Nav.Item as="li" className="py-3 d-flex justify-content-center">
-                        <Link><MdOutlineHelpOutline className="fs-4 icon"/></Link>
+                        <Link className="text-body"><MdOutlineHelpOutline className="fs-4 icon"/></Link>
                         </Nav.Item>
                     <Nav.Item as="li" className="py-3 d-flex justify-content-center">
                         {/* <Link to="/notification" ><MdNotificationsNone className="fs-4 icon" /></Link> */}
-                        <Link to="/notification" onClick={() => setShow(true)}><MdNotificationsNone className="fs-4 icon" /></Link>
+                        <Link className="text-body" to="/notification" onClick={() => setShow(true)}><MdNotificationsNone className="fs-4 icon" /></Link>
                         </Nav.Item>
                     <Nav.Item as="li" className="py-3 d-flex">
                         <Link to="/profile" className="img-circle"><img className="img-thumbnail " src={Dummy} /></Link>
