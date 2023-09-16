@@ -48,7 +48,7 @@ export default function Profile() {
                         </Col>
                     </Row>
                 </div>
-                
+
                 <Row className="mb-5">
                     <Col xs={12}>
                         <Card className="w-100 border-0 rounded-4 shadow-bottom overflow-hidden">
@@ -118,8 +118,8 @@ export default function Profile() {
                                     <GroupSuggestion name="हिन्दू संघ"/>
                                     <GroupSuggestion name="Jai Bholenath"/>
                                     <GroupSuggestion name="ब्राह्मण भूमिहार एकता मंच"/>
-                                    
-                                    
+
+
                                 </div>
                             </Card.Body>
                         </Card>
@@ -141,7 +141,7 @@ export default function Profile() {
                             <img src="/images/temp5.jpg" className="w-100 rounded-4 shadow-bottom"/>
                         </div>
                     </Link>
-                    
+
                     <Link>
                         <div>
                             <img src="/images/temp3.jpg" className="w-100 rounded-4 shadow-bottom"/>
@@ -153,31 +153,31 @@ export default function Profile() {
                             <img src="/images/temp4.jpg" className="w-100 rounded-4 shadow-bottom"/>
                         </div>
                     </Link>
-                   
+
                     <Link>
                         <div>
                             <img src="/images/temp5.jpg" className="w-100 rounded-4 shadow-bottom"/>
                         </div>
                     </Link>
-                   
+
                     <Link>
                         <div>
                             <img src="/images/temp4.jpg" className="w-100 rounded-4 shadow-bottom"/>
                         </div>
                     </Link>
-                   
+
                     <Link>
                         <div>
                             <img src="/images/temp6.jpg" className="w-100 rounded-4 shadow-bottom"/>
                         </div>
                     </Link>
-                    
+
                     <Link>
                         <div>
                             <img src="/images/temp3.jpg" className="w-100 rounded-4 shadow-bottom"/>
                         </div>
                     </Link>
-                   
+
                     <Link>
                         <div>
                             <img src="/images/temp7.jpg" className="w-100 rounded-4 shadow-bottom"/>
@@ -188,55 +188,55 @@ export default function Profile() {
                             <img src="/images/temp5.jpg" className="w-100 rounded-4 shadow-bottom"/>
                         </div>
                     </Link>
-                   
+
                     <Link>
                         <div>
                             <img src="/images/temp2.jpg" className="w-100 rounded-4 shadow-bottom"/>
                         </div>
                     </Link>
-                   
+
                     <Link>
                         <div>
                             <img src="/images/temp5.jpg" className="w-100 rounded-4 shadow-bottom"/>
                         </div>
                     </Link>
-                   
+
                     <Link>
                         <div>
                             <img src="/images/temp3.jpg" className="w-100 rounded-4 shadow-bottom"/>
                         </div>
                     </Link>
-                    
+
                     <Link>
                         <div>
                             <img src="/images/temp5.jpg" className="w-100 rounded-4 shadow-bottom"/>
                         </div>
                     </Link>
-                
+
                     <Link>
                         <div>
                             <img src="/images/temp2.jpg" className="w-100 rounded-4 shadow-bottom"/>
                         </div>
                     </Link>
-                
+
                     <Link>
                         <div>
                             <img src="/images/temp3.jpg" className="w-100 rounded-4 shadow-bottom"/>
                         </div>
                     </Link>
-                
+
                     <Link>
                         <div>
                             <img src="/images/temp5.jpg" className="w-100 rounded-4 shadow-bottom"/>
                         </div>
                     </Link>
-                  
+
                     <Link>
                         <div>
                             <img src="/images/temp2.jpg" className="w-100 rounded-4 shadow-bottom"/>
                         </div>
                     </Link>
- 
+
                     </Col>
                 </Row>
             </Container>
