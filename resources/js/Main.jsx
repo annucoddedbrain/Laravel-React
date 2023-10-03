@@ -10,6 +10,7 @@ import Chat from "./pages/Chat";
 import Community from "./pages/community";
 import Friends from "./pages/Friends";
 import Addtemple from "./pages/Addtemple";
+import Uploadtemple from "./pages/Uploadtemple";
 
 
 function Main() {
@@ -23,6 +24,7 @@ function Main() {
             <Route path="/community" exact={true} element={<Community />} />
             <Route path="/Friends" exact={true} element={<Friends />} />
             <Route path="/Addtemple" exact={true} element={<Addtemple />} />
+            <Route path="/Uploadtemple" exact={true} element={<Uploadtemple />} />
 
             <Route path="*" element={<NotFound />} />
         </Routes>

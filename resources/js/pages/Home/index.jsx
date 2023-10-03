@@ -33,7 +33,7 @@ export default function Home() {
         },
         content: <><p>Kedarnath Temple is a Hindu temple, one of the twelve jyotirlinga of Shiva. The temple is located on the Garhwal Himalayan range near the Mandakini river</p>
             <div>
-                <img src="/images/kedarnath1.jpg"/>
+                <img src="/images/kedarnath1.jpg" />
             </div></>
     }
 
@@ -189,154 +189,139 @@ export default function Home() {
                         </Row>
                     </Col>
 
+                    <Col xs={5} className=" h-mx-360 p-3 Box">
+                        <Row>
+                            <Col xs={12}>
+                                <h3>Whats happening ?</h3>
+                            </Col>
+                        </Row>
 
+                        <Row>
+                            <Col xs={7}>
+                                <h5 className="mb-0 mt-2">Ganesh Puja and aarti</h5>
+                                <p className="mb-0">sanatanLok</p>
+                                <h6 className="live-circle">Live Arti </h6>
+                            </Col>
 
+                            <Col xs={5} >
+                                <img src="/images/kedarnath1.jpg" className="w-75 mx-4 kedarnath " />
+                            </Col>
+                        </Row>
 
+                        <Row>
+                            <Col xs={7}>
+                                <h5 className="mt-2 mb-0"> Sanatan Sanstha</h5>
+                                <p className="mb-0">sanatanLok</p>
+                            </Col>
+                            <Col xs={5}>
+                                <MdMoreHoriz className=" mt-2 fs-4 mx-5"></MdMoreHoriz>
+                            </Col>
+                        </Row>
 
+                        <Row>
+                            <Col xs={7}>
+                                <h5 className="mt-3 mb-0"> Sanatan Dharma</h5>
+                                <p className="mb-0">sanatanLok</p>
+                            </Col>
+                            <Col xs={5}>
+                                <MdMoreHoriz className="mx-5 mt-3 fs-4"></MdMoreHoriz>
+                            </Col>
+                        </Row>
 
-                <Col xs={5} className=" h-mx-360 p-3 Box">
-                    <Row>
-                        <Col xs={12}>
-                        <h3>Whats happening ?</h3>
-                        </Col>
-                    </Row>
+                        <Row>
+                            <Col xs={7}>
+                                <h5 className="mt-3 mb-0"> Saregama Bhakti</h5>
+                                <p className="mb-0">sanatanLok</p>
+                            </Col>
+                            <Col xs={5}>
+                                <MdMoreHoriz className="mx-5 mt-3 fs-4"></MdMoreHoriz>
+                            </Col>
+                        </Row>
 
-                     <Row>
-                        <Col xs={7}><h5 className="mb-0 mt-2">Ganesh Puja and aarti</h5>
-                        <p className="mb-0">sanatanLok</p>
-                        <h6 className="live-circle">Live Arti </h6>
-                        </Col>
+                        <Row>
+                            <Col xs={7}>
+                                <p className="mt-3 mx-5"> Show More</p>
+                            </Col>
+                        </Row>
 
-                        <Col xs={5} >
-                            <img src="/images/kedarnath1.jpg" className="w-75 mx-4 kedarnath "/>
-                        </Col>
-                     </Row>
+                        <Row>
+                            <Col xs={3}>
+                                <div className="profile-image mt-4">
+                                    <img src="/images/dummy.png" className="img-responsive" />
+                                </div>
+                            </Col>
+                            <Col xs={7} className="d-flex align-items-center">
+                                <div className="d-flex flex-column justify-content-start profile-info">
+                                    <h5 className="profile-name mb-1 mt-4">Sameer Tomar</h5>
+                                    <p className="fw-600 m-0 p-0 profile-username text-start text-muted">@sameer</p>
+                                </div>
+                            </Col>
+                            <Col xs={2} className="d-flex align-items-center justify-content-center">
+                                <Link className="btn btn-white rounded-5 mt-3 switch">Switch</Link>
+                            </Col>
+                        </Row>
 
-                     <Row>
-                        <Col xs={7}>
-                           <h5 className="mt-2 mb-0"> Sanatan Sanstha</h5>
-                           <p className="mb-0">sanatanLok</p>
-                        </Col>
-                        <Col xs={5}>
-                        <MdMoreHoriz className=" mt-2 fs-4 mx-5"></MdMoreHoriz>
-                        </Col>
-                     </Row>
+                        <Row>
+                            <Col xs={9}>
+                                <h5 className="mt-4">Suggested For You</h5>
+                            </Col>
 
-                     <Row>
-                        <Col xs={7}>
-                           <h5 className="mt-3 mb-0"> Sanatan Dharma</h5>
-                           <p className="mb-0">sanatanLok</p>
-                        </Col>
-                        <Col xs={5}>
-                        <MdMoreHoriz className="mx-5 mt-3 fs-4"></MdMoreHoriz>
-                        </Col>
-                     </Row>
+                            <Col xs={3}>
+                                <h5 className="mt-4">See All</h5>
+                            </Col>
+                        </Row>
 
-                     <Row>
-                        <Col xs={7}>
-                           <h5 className="mt-3 mb-0"> Saregama Bhakti</h5>
-                           <p className="mb-0">sanatanLok</p>
-                        </Col>
-                        <Col xs={5}>
-                        <MdMoreHoriz className="mx-5 mt-3 fs-4"></MdMoreHoriz>
-                        </Col>
-                     </Row>
+                        <Row>
+                            <Col xs={3}>
+                                <div className="profile-image mt-4">
+                                    <img src="/images/dummy.png" className="img-responsive" />
+                                </div>
+                            </Col>
+                            <Col xs={7} className="d-flex align-items-center">
+                                <div className="d-flex flex-column justify-content-start profile-info">
+                                    <h5 className="profile-name mb-1 mt-4">pankajsharma_61</h5>
+                                    <p className="fw-600 m-0 p-0 profile-username text-start text-muted">Follow you</p>
+                                </div>
+                            </Col>
+                            <Col xs={2} className="d-flex align-items-center justify-content-center">
+                                <Link className="btn btn-white rounded-5 mt-3 switch">Follow</Link>
+                            </Col>
+                        </Row>
 
-                     <Row>
-                        <Col xs={7}>
-                            <p className="mt-3 mx-5"> Show More</p>
-                        </Col>
-                     </Row>
+                        <Row>
+                            <Col xs={3}>
+                                <div className="profile-image mt-4">
+                                    <img src="/images/dummy.png" className="img-responsive" />
+                                </div>
+                            </Col>
+                            <Col xs={7} className="d-flex align-items-center">
+                                <div className="d-flex flex-column justify-content-start profile-info">
+                                    <h5 className="profile-name mb-1 mt-4">itsme_sameer</h5>
+                                    <p className="fw-600 m-0 p-0 profile-username text-start text-muted">Follow you</p>
+                                </div>
+                            </Col>
+                            <Col xs={2} className="d-flex align-items-center justify-content-center">
+                                <Link className="btn btn-white rounded-5 mt-3 switch">Follow</Link>
+                            </Col>
+                        </Row>
 
-                     <Row>
-                     <Col xs={3}>
-                        <div className="profile-image mt-4">
-                            <img src="/images/dummy.png" className="img-responsive" />
-                            </div>
+                        <Row>
+                            <Col xs={3}>
+                                <div className="profile-image mt-4">
+                                    <img src="/images/dummy.png" className="img-responsive" />
+                                </div>
+                            </Col>
+                            <Col xs={7} className="d-flex align-items-center">
+                                <div className="d-flex flex-column justify-content-start profile-info">
+                                    <h5 className="profile-name mb-1 mt-4">Sameer Tomar</h5>
+                                    <p className="fw-600 m-0 p-0 profile-username text-start text-muted">Follow you</p>
+                                </div>
+                            </Col>
+                            <Col xs={2} className="d-flex align-items-center justify-content-center">
+                                <Link className="btn btn-white rounded-5 mt-3 switch">Follow</Link>
+                            </Col>
+                        </Row>
                     </Col>
-                       <Col xs={7} className="d-flex align-items-center">
-                         <div className="d-flex flex-column justify-content-start profile-info">
-                            <h5 className="profile-name mb-1 mt-4">Sameer Tomar</h5>
-                            <p className="fw-600 m-0 p-0 profile-username text-start text-muted">@sameer</p>
-                         </div>
-                       </Col>
-                       <Col xs={2} className="d-flex align-items-center justify-content-center">
-                       <Link className="btn btn-white rounded-5 mt-3 switch">Switch</Link>
-                        </Col>
-                     </Row>
-
-                     <Row>
-                        <Col xs={9}>
-                            <h5 className="mt-4">Suggested For You</h5>
-                        </Col>
-
-                        <Col xs={3}>
-                            <h5 className="mt-4">See All</h5>
-                        </Col>
-                     </Row>
-
-                     <Row>
-                     <Col xs={3}>
-                        <div className="profile-image mt-4">
-                            <img src="/images/dummy.png" className="img-responsive" />
-                            </div>
-                    </Col>
-                       <Col xs={7} className="d-flex align-items-center">
-                         <div className="d-flex flex-column justify-content-start profile-info">
-                            <h5 className="profile-name mb-1 mt-4">pankajsharma_61</h5>
-                            <p className="fw-600 m-0 p-0 profile-username text-start text-muted">Follow you</p>
-                         </div>
-                       </Col>
-                       <Col xs={2} className="d-flex align-items-center justify-content-center">
-                       <Link className="btn btn-white rounded-5 mt-3 switch">Follow</Link>
-                        </Col>
-                     </Row>
-
-                     <Row>
-                     <Col xs={3}>
-                        <div className="profile-image mt-4">
-                            <img src="/images/dummy.png" className="img-responsive" />
-                            </div>
-                    </Col>
-                       <Col xs={7} className="d-flex align-items-center">
-                         <div className="d-flex flex-column justify-content-start profile-info">
-                            <h5 className="profile-name mb-1 mt-4">itsme_sameer</h5>
-                            <p className="fw-600 m-0 p-0 profile-username text-start text-muted">Follow you</p>
-                         </div>
-                       </Col>
-                       <Col xs={2} className="d-flex align-items-center justify-content-center">
-                       <Link className="btn btn-white rounded-5 mt-3 switch">Follow</Link>
-                        </Col>
-                     </Row>
-
-                     <Row>
-                     <Col xs={3}>
-                        <div className="profile-image mt-4">
-                            <img src="/images/dummy.png" className="img-responsive" />
-                            </div>
-                    </Col>
-                       <Col xs={7} className="d-flex align-items-center">
-                         <div className="d-flex flex-column justify-content-start profile-info">
-                            <h5 className="profile-name mb-1 mt-4">Sameer Tomar</h5>
-                            <p className="fw-600 m-0 p-0 profile-username text-start text-muted">Follow you</p>
-                         </div>
-                       </Col>
-                       <Col xs={2} className="d-flex align-items-center justify-content-center">
-                       <Link className="btn btn-white rounded-5 mt-3 switch">Follow</Link>
-                        </Col>
-                     </Row>
-
-
-
-
-
-                </Col>
-
-
-
-
-
-
                 </Row>
 
 

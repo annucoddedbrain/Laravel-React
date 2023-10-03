@@ -24,10 +24,6 @@ export default function Chat() {
                                 </div>
                             </Col>
 
-
-
-
-
                             <Col xs={9} className="abc d-flex align-items-center justify-content-end gap-1  ">
                                 <Link className="fs-3  mx-4 icon" to="/community"><MdGroups2/></Link>
                                 <Link className="fs-4 mx-4  icon"><MdChat/></Link>
@@ -206,7 +202,7 @@ export default function Chat() {
 
                             <Col xs={2} >
                                 <div className="profile-image mt-1">
-                                    <img src="/images/dummy.png" className="img-responsive " />
+                                    <img src="/images/dummy.png" className="img-responsive"/>
                                 </div>
                             </Col>
                             <Col xs={6} className="d-flex align-items-center ">
