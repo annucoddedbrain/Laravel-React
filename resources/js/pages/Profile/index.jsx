@@ -174,7 +174,7 @@ export default function Profile() {
 
                                         <div className="gallery-item" >
 
-                                            <img src="/images/pic2.jpeg" className="gallery-image w-100  shadow-bottom" alt="" />
+                                            <img src="/images/pic2.png" className="gallery-image w-100  shadow-bottom" alt="" />
 
                                             <div className="gallery-item-info">
 
@@ -211,7 +211,7 @@ export default function Profile() {
 
                                         <div className="gallery-item" >
 
-                                            <img src="/images/pic2.jpeg" className="gallery-image w-100  shadow-bottom" alt="" />
+                                            <img src="/images/pic2.png" className="gallery-image w-100  shadow-bottom" alt="" />
 
                                             <div className="gallery-item-info">
 
@@ -320,7 +320,7 @@ export default function Profile() {
 
                                         <div className="gallery-item" >
 
-                                            <img src="/images/pic2.jpeg" className="gallery-image w-100  shadow-bottom" alt="" />
+                                            <img src="/images/pic2.png" className="gallery-image w-100  shadow-bottom" alt="" />
 
                                             <div className="gallery-item-info">
 
@@ -376,7 +376,7 @@ export default function Profile() {
 
                                         <div className="gallery-item" >
 
-                                            <img src="/images/pic1.jpeg" className="gallery-image w-100  shadow-bottom" alt="" />
+                                            <img src="/images/pic1.png" className="gallery-image w-100  shadow-bottom" alt="" />
 
                                             <div className="gallery-item-info">
 
@@ -394,7 +394,7 @@ export default function Profile() {
 
                                         <div className="gallery-item" >
 
-                                            <img src="/images/pic2.jpeg" className="gallery-image w-100  shadow-bottom" alt="" />
+                                            <img src="/images/pic2.png" className="gallery-image w-100  shadow-bottom" alt="" />
 
                                             <div className="gallery-item-info">
 
@@ -412,7 +412,7 @@ export default function Profile() {
 
                                         <div className="gallery-item" >
 
-                                            <img src="/images/pic1.jpeg" className="gallery-image w-100  shadow-bottom" alt="" />
+                                            <img src="/images/pic1.png" className="gallery-image w-100  shadow-bottom" alt="" />
 
                                             <div className="gallery-item-info">
 
@@ -449,7 +449,7 @@ export default function Profile() {
 
                                         <div className="gallery-item" >
 
-                                            <img src="/images/pic1.jpeg" className="gallery-image w-100  shadow-bottom" alt="" />
+                                            <img src="/images/pic1.png" className="gallery-image w-100  shadow-bottom" alt="" />
 
                                             <div className="gallery-item-info">
 

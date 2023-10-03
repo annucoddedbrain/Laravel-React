@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Header() {
     return (
-        <header id="header" className="border d-flex header justify-content-between px-3 py-3 rounded shadow mb-3 flex-column flex-lg-row">
+        <header id="header" className="border d-flex header justify-content-between px-3 py-2 rounded shadow mb-3 flex-column flex-lg-row">
             <Form>
                 <InputGroup>
                     <Form.Control type="text" placeholder="Search..."></Form.Control>

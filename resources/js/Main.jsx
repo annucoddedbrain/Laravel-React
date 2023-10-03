@@ -10,7 +10,7 @@ import Chat from "./pages/Chat";
 import Community from "./pages/community";
 import Friends from "./pages/Friends";
 import Groups from "./pages/Groups";
-
+import FindFriends from "./pages/FindFriends";
 
 function Main() {
     return (
@@ -23,6 +23,7 @@ function Main() {
             <Route path="/groups" exact={true} element={<Groups />} />
             <Route path="/friends" exact={true} element={<Friends />} />
             <Route path="/community" exact={true} element={<Community />} />
+            <Route path="/find_friends" exact={true} element={<FindFriends />} />
 
             <Route path="*" element={<NotFound />} />
         </Routes>

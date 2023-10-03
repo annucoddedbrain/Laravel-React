@@ -118,6 +118,7 @@ export default function Temple() {
             <Row>
                 <Col xs={12} className="d-flex gap-5  mb-4 mx-5">
                     <Link className="btn bg-dark-subtle shadow-bottom"> Near By Temple</Link>
+                    <Link className="btn bg-dark-subtle shadow-bottom"> Temple By Name</Link>
                     <Link >
                         <Dropdown>
                             <Dropdown.Toggle className="btn bg-dark-subtle border text-dark shadow-bottom ">
