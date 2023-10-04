@@ -100,6 +100,8 @@ export default function Profile() {
                                         </Col>
                                     </Row>
                                 </Modal.Body>
+
+                                
                                 <Modal.Footer>
                                     <Button variant="gray" onClick={handleClose} className="w-100 fw-900 text-capitalize shadow-bottom edit-text">
                                         Edit About info
