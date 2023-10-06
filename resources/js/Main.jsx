@@ -9,12 +9,8 @@ import Temple from "./pages/Temple";
 import Chat from "./pages/Chat";
 import Community from "./pages/community";
 import Friends from "./pages/Friends";
-import Addtemple from "./pages/Addtemple";
-import Uploadtemple from "./pages/Uploadtemple";import Groups from "./pages/Groups";
+import Groups from "./pages/Groups";
 import FindFriends from "./pages/FindFriends";
-
-import AllFriends from "./pages/AllFriends";
-
 function Main() {
     return (
         <Routes>
