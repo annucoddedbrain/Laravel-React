@@ -12,6 +12,7 @@ import Friends from "./pages/Friends";
 import Groups from "./pages/Groups";
 import FindFriends from "./pages/FindFriends";
 import AllFriends from "./pages/AllFriends";
+import Addtemple from "./pages/Addtemple";
 
 function Main() {
     return (
