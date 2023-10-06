@@ -24,14 +24,10 @@ export default function Chat() {
                                 </div>
                             </Col>
 
-
-
-
-
                             <Col xs={9} className="abc d-flex align-items-center justify-content-end gap-1  ">
-                                <Link className="fs-3  mx-4 icon" to="/community"><MdGroups2/></Link>
-                                <Link className="fs-4 mx-4  icon"><MdChat/></Link>
-                                <Link className="fs-4  icon"><MdMoreVert/></Link>
+                                <Link className="fs-3  mx-4 icon" to="/community"><MdGroups2 /></Link>
+                                <Link className="fs-4 mx-4  icon"><MdChat /></Link>
+                                <Link className="fs-4  icon"><MdMoreVert /></Link>
                             </Col>
                         </Row>
 
@@ -52,7 +48,7 @@ export default function Chat() {
 
                         <Row className="border-bottom">
 
-                            <Col xs={2} >
+                            <Col xs={2}>
                                 <div className="profile-image mt-3 mb-2">
                                     <img src="/images/dummy.png" className="img-responsive " />
                                 </div>
@@ -65,15 +61,15 @@ export default function Chat() {
                             </Col>
 
                             <Col xs={4}>
-                                <p className="mt-4 mx-4 ">2:30 pm</p>
+                                <p className="mt-4 mx-4">2:30 pm</p>
                             </Col>
                         </Row>
 
                         <Row className="border-bottom">
 
-                            <Col xs={2} >
+                            <Col xs={2}>
                                 <div className="profile-image mt-1">
-                                    <img src="/images/dummy.png" className="img-responsive " />
+                                    <img src="/images/dummy.png" className="img-responsive"/>
                                 </div>
                             </Col>
                             <Col xs={6} className="d-flex align-items-center ">
@@ -84,15 +80,15 @@ export default function Chat() {
                             </Col>
 
                             <Col xs={4}>
-                                <p className="mt-4 mx-4 ">2:30 pm</p>
+                                <p className="mt-4 mx-4">2:30 pm</p>
                             </Col>
                         </Row>
 
                         <Row className="border-bottom">
 
-                            <Col xs={2} >
+                            <Col xs={2}>
                                 <div className="profile-image mt-1">
-                                    <img src="/images/dummy.png" className="img-responsive " />
+                                    <img src="/images/dummy.png" className="img-responsive"/>
                                 </div>
                             </Col>
                             <Col xs={6} className="d-flex align-items-center ">
@@ -103,15 +99,15 @@ export default function Chat() {
                             </Col>
 
                             <Col xs={4}>
-                                <p className="mt-4 mx-4 ">2:30 pm</p>
+                                <p className="mt-4 mx-4">2:30 pm</p>
                             </Col>
                         </Row>
 
                         <Row className="border-bottom">
 
-                            <Col xs={2} >
+                            <Col xs={2}>
                                 <div className="profile-image mt-1">
-                                    <img src="/images/dummy.png" className="img-responsive " />
+                                    <img src="/images/dummy.png" className="img-responsive"/>
                                 </div>
                             </Col>
                             <Col xs={6} className="d-flex align-items-center ">
@@ -122,15 +118,15 @@ export default function Chat() {
                             </Col>
 
                             <Col xs={4}>
-                                <p className="mt-4 mx-4 ">2:30 pm</p>
+                                <p className="mt-4 mx-4">2:30 pm</p>
                             </Col>
                         </Row>
 
                         <Row className="border-bottom">
 
-                            <Col xs={2} >
+                            <Col xs={2}>
                                 <div className="profile-image mt-1">
-                                    <img src="/images/dummy.png" className="img-responsive " />
+                                    <img src="/images/dummy.png" className="img-responsive"/>
                                 </div>
                             </Col>
                             <Col xs={6} className="d-flex align-items-center ">
@@ -141,15 +137,15 @@ export default function Chat() {
                             </Col>
 
                             <Col xs={4}>
-                                <p className="mt-4 mx-4 ">2:30 pm</p>
+                                <p className="mt-4 mx-4">2:30 pm</p>
                             </Col>
                         </Row>
 
                         <Row className="border-bottom">
 
-                            <Col xs={2} >
+                            <Col xs={2}>
                                 <div className="profile-image mt-1">
-                                    <img src="/images/dummy.png" className="img-responsive " />
+                                    <img src="/images/dummy.png" className="img-responsive"/>
                                 </div>
                             </Col>
                             <Col xs={6} className="d-flex align-items-center ">
@@ -160,15 +156,15 @@ export default function Chat() {
                             </Col>
 
                             <Col xs={4}>
-                                <p className="mt-4 mx-4 ">2:30 pm</p>
+                                <p className="mt-4 mx-4">2:30 pm</p>
                             </Col>
                         </Row>
 
                         <Row className="border-bottom">
 
-                            <Col xs={2} >
+                            <Col xs={2}>
                                 <div className="profile-image mt-1">
-                                    <img src="/images/dummy.png" className="img-responsive " />
+                                    <img src="/images/dummy.png" className="img-responsive"/>
                                 </div>
                             </Col>
                             <Col xs={6} className="d-flex align-items-center ">
@@ -179,15 +175,15 @@ export default function Chat() {
                             </Col>
 
                             <Col xs={4}>
-                                <p className="mt-4 mx-4 ">2:30 pm</p>
+                                <p className="mt-4 mx-4">2:30 pm</p>
                             </Col>
                         </Row>
 
                         <Row className="border-bottom">
 
-                            <Col xs={2} >
+                            <Col xs={2}>
                                 <div className="profile-image mt-1">
-                                    <img src="/images/dummy.png" className="img-responsive " />
+                                    <img src="/images/dummy.png" className="img-responsive"/>
                                 </div>
                             </Col>
                             <Col xs={6} className="d-flex align-items-center ">
@@ -198,15 +194,15 @@ export default function Chat() {
                             </Col>
 
                             <Col xs={4}>
-                                <p className="mt-4 mx-4 ">2:30 pm</p>
+                                <p className="mt-4 mx-4">2:30 pm</p>
                             </Col>
                         </Row>
 
                         <Row className="border-bottom">
 
-                            <Col xs={2} >
+                            <Col xs={2}>
                                 <div className="profile-image mt-1">
-                                    <img src="/images/dummy.png" className="img-responsive " />
+                                    <img src="/images/dummy.png" className="img-responsive"/>
                                 </div>
                             </Col>
                             <Col xs={6} className="d-flex align-items-center ">
@@ -217,7 +213,7 @@ export default function Chat() {
                             </Col>
 
                             <Col xs={4}>
-                                <p className="mt-4 mx-4 ">2:30 pm</p>
+                                <p className="mt-4 mx-4">2:30 pm</p>
                             </Col>
                         </Row>
 
@@ -227,7 +223,7 @@ export default function Chat() {
                         <Row className="nnn py-2">
                             <Col xs={2}>
                                 <div className="profile-image">
-                                    <img src="/images/dummy.png" className="img-responsive" />
+                                    <img src="/images/dummy.png" className="img-responsive"/>
                                 </div>
                             </Col>
                             <Col xs={6} className="d-flex align-items-center">
@@ -236,9 +232,9 @@ export default function Chat() {
                                 </div>
                             </Col>
                             <Col xs={4} className="d-flex align-items-center justify-content-end gap-2 mb-3">
-                                <AiOutlineVideoCamera className="fs-4 "></AiOutlineVideoCamera>
-                                <AiOutlineSearch className="fs-4  mx-4"></AiOutlineSearch>
-                                <AiOutlineMore className="fs-4"></AiOutlineMore>
+                                <AiOutlineVideoCamera className="fs-4 "/>
+                                <AiOutlineSearch className="fs-4 mx-4"/>
+                                <AiOutlineMore className="fs-4"/>
 
                             </Col>
 
@@ -251,7 +247,7 @@ export default function Chat() {
                                     <div className="received-msg ">
                                         <div className="received-msg-inbox">
                                             <p>Hi, any update of Today ?</p>
-                                            <span className="time">18:06 PM  </span>
+                                            <span className="time">18:06 PM </span>
                                         </div>
                                     </div>
                                 </div>
@@ -270,7 +266,7 @@ export default function Chat() {
                                     <div className="received-msg ">
                                         <div className="received-msg-inbox">
                                             <p>Ok Sir,Thankyou</p>
-                                            <span className="time">19:24 PM  </span>
+                                            <span className="time">19:24 PM </span>
                                         </div>
                                     </div>
                                 </div>
@@ -283,29 +279,12 @@ export default function Chat() {
                                 <span className="input-group-text send-icon"><MdOutlineEmojiEmotions className="fs-4"></MdOutlineEmojiEmotions></span>
                                 <span className="input-group-text send-icon"><MdAdd className="fs-4"></MdAdd></span>
                                 <input type="text" className="control" placeholder="Type a msg"></input>
-                                    <div className="input-group-append ">
-                                        <span className="input-group-text send-icon"><MdKeyboardVoice className="fs-4"></MdKeyboardVoice>
-                                        </span>
-                                    </div>
+                                <div className="input-group-append ">
+                                    <span className="input-group-text send-icon"><MdKeyboardVoice className="fs-4"></MdKeyboardVoice>
+                                    </span>
+                                </div>
                             </div>
                         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     </Col>
                 </Row>
             </Container>
