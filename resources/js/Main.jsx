@@ -15,6 +15,8 @@ import AllFriends from "./pages/AllFriends";
 import Addtemple from "./pages/Addtemple";
 import Uploadtemple from "./pages/Uploadtemple";
 
+import Admin, { Saurav, ATemples, AUsers } from "./admin";
+
 function Main() {
     return (
         <Routes>
@@ -32,7 +34,16 @@ function Main() {
             <Route path="/find_friends" exact={true} element={<FindFriends />} />
             <Route path="/all_friends" exact={true} element={<AllFriends />} />
 
-            <Route path="*" element={<NotFound />} />
+            {/* Admin Routes */}
+            <Route path="admin" >
+                <Route index element={<Admin />}/>
+                <Route path="dashboard" element={<h2>DashBoard</h2>} exact></Route>
+                <Route path="profile" element={<Saurav />} exact></Route>
+                <Route path="temples" element={<ATemples />} exact></Route>
+                <Route path="users" element={<AUsers />} exact></Route>
+            </Route>
+
+            {/* {  <Route path="*" element={<NotFound />} /> } */}
         </Routes>
     )
 }

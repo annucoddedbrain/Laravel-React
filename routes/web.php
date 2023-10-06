@@ -17,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
  Route::view("{path?}", "react")->where("path", ".*");
+//  Route::view("admin/{path?}", "admin")->where("path", ".*");
