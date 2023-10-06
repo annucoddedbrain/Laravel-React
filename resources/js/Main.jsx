@@ -13,6 +13,7 @@ import Groups from "./pages/Groups";
 import FindFriends from "./pages/FindFriends";
 import AllFriends from "./pages/AllFriends";
 import Addtemple from "./pages/Addtemple";
+import Uploadtemple from "./pages/Uploadtemple";
 
 function Main() {
     return (
