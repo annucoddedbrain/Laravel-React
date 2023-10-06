@@ -4,8 +4,9 @@ import "./style.scss";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Card } from "react-bootstrap";
-import { MdMoreVert, MdOutlineGroups, MdShare } from "react-icons/md";
+import { Card, Tab, Tabs } from "react-bootstrap";
+import { MdMoreVert, MdOutlineGroups, MdShare, MdThumbUp } from "react-icons/md";
+import { BsFillChatFill, BsFillHeartFill } from "react-icons/bs";
 import { FcCamera } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import GroupSuggestion from "../../components/GroupSuggestion";
@@ -14,11 +15,11 @@ import GroupSuggestion from "../../components/GroupSuggestion";
 export default function Profile() {
 
 
-    window.addEventListener("scroll", function() {
-        if( window.scrollY >= 50 ){
+    window.addEventListener("scroll", function () {
+        if (window.scrollY >= 50) {
             document.body.classList.add('sticky-profile-header');
         }
-        else{
+        else {
             document.body.classList.remove('sticky-profile-header');
         }
     });
@@ -38,13 +39,13 @@ export default function Profile() {
                             </div>
                         </Col>
                         <Col xs={9} className=" d-flex justify-content-end align-items-center gap-4">
-                        <Link className="img-circle text-body btn-gray border h-auto w-auto"><MdMoreVert className="fs-2 p-1"/></Link>
-                        <Link className="img-circle text-body btn-gray border h-auto w-auto"><MdShare className ="fs-2 p-1"/></Link>
-                        <Link className="btn btn-gray h-auto  rounded-5 m-2">Temple Post</Link>
-                        <Link className="btn btn-gray h-auto  rounded-5 m-2">Follow</Link>
-                        <Link className="btn btn-accent h-auto  rounded-5 m-2 ">Message</Link>
-                        {/* <Link className="img-circle text-body bg-dark-subtle border h-50 w-auto rounded-1 p-2 text-decoration-none">Follow</Link> */}
-                        {/* <Link className="img-circle text-body bg-dark-subtle border h-50 w-auto rounded-1 p-2 text-decoration-none ">Message</Link> */}
+                            <Link className="img-circle text-body btn-gray border h-auto w-auto"><MdMoreVert className="fs-2 p-1" /></Link>
+                            <Link className="img-circle text-body btn-gray border h-auto w-auto"><MdShare className="fs-2 p-1" /></Link>
+                            <Link className="btn btn-gray h-auto  rounded-5 m-2">Temple Post</Link>
+
+                            <Link className="btn btn-accent h-auto  rounded-5 m-2 ">Message</Link>
+                            {/* <Link className="img-circle text-body bg-dark-subtle border h-50 w-auto rounded-1 p-2 text-decoration-none">Follow</Link> */}
+                            {/* <Link className="img-circle text-body bg-dark-subtle border h-50 w-auto rounded-1 p-2 text-decoration-none ">Message</Link> */}
                         </Col>
                     </Row>
                 </div>
@@ -70,9 +71,9 @@ export default function Profile() {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs={12} className="d-flex align-items-center justify-content-center h4 text-muted wtu border-2 border-bottom">
+                                        <Col xs={12} className="d-flex align-items-center justify-content-center h5 text-muted wtu border-2 border-bottom">
                                             <Card.Text>
-                                                Are you want to upload ?
+                                                Are you want to upload something ?
                                             </Card.Text>
                                         </Col>
                                     </Row>
@@ -89,7 +90,7 @@ export default function Profile() {
 
                                 </div>
                                 <div className="d-flex rounded-4 col-7 h-mx-360">
-                                    <img src="/images/temp1.jpg" className="img-responsive" />
+                                    <img src="/images/temp7.jpg" className="img-responsive" />
                                 </div>
                             </Card.Body>
                         </Card>
@@ -112,19 +113,27 @@ export default function Profile() {
                                             <Link className="btn btn-accent rounded-5">Create Groups</Link>
                                         </Col>
                                     </Row>
-                                    <GroupSuggestion name="Hindu Samhati"/>
-                                    <GroupSuggestion name="Kattar Hindu Samaj"/>
-                                    <GroupSuggestion name="Sanatan Dharm humara"/>
-                                    <GroupSuggestion name="हिन्दू संघ"/>
-                                    <GroupSuggestion name="Jai Bholenath"/>
-                                    <GroupSuggestion name="ब्राह्मण भूमिहार एकता मंच"/>
+                                    <GroupSuggestion name="Hindu Samhati" />
+                                    <GroupSuggestion name="Kattar Hindu Samaj" />
+                                    <GroupSuggestion name="Sanatan Dharm humara" />
+                                    <GroupSuggestion name="हिन्दू संघ" />
+                                    <GroupSuggestion name="Jai Bholenath" />
+                                    <GroupSuggestion name="ब्राह्मण भूमिहार एकता मंच" />
+                                    <GroupSuggestion name="Hindu Samhati" />
+                                    <GroupSuggestion name="Kattar Hindu Samaj" />
+                                    <GroupSuggestion name="Sanatan Dharm humara" />
+                                    <GroupSuggestion name="हिन्दू संघ" />
+                                    <GroupSuggestion name="Jai Bholenath" />
+                                    <GroupSuggestion name="ब्राह्मण भूमिहार एकता मंच" />
+                                    <GroupSuggestion name="हिन्दू संघ" />
+                                    <GroupSuggestion name="Jai Bholenath" />
 
 
                                 </div>
                             </Card.Body>
                         </Card>
 
-                        <div className="mt-5">
+                        {/* <div className="mt-5">
                         <h5>Tags</h5>
                         <Link className="btn col w-500 tag-btns rounded-5 m-2">#temple</Link>
                         <Link className="btn col w-500 tag-btns rounded-5 m-2">#mandir</Link>
@@ -132,110 +141,681 @@ export default function Profile() {
                         <Link className="btn col w-500 tag-btns rounded-5 m-2">#sanatan</Link>
                         <Link className="btn col w-500 tag-btns rounded-5 m-2">#religion</Link>
                         <Link className="btn col w-500 rounded-5 m-2 tag-btns">#belief-in-god</Link>
-                        </div>
+                        </div> */}
                     </Col>
 
-                    <Col xs={7} className="gap-3 count-3 mossonary">
-                   <Link>
-                        <div>
-                            <img src="/images/temp5.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                        </div>
-                    </Link>
+                    <Col xs={7}>
 
-                    <Link>
-                        <div>
-                            <img src="/images/temp3.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                        </div>
-                    </Link>
+                        <Tabs
+                            defaultActiveKey="posts"
+                            className="mb-3 justify-content-center"
+                        >
+                            <Tab eventKey="posts" title="Posts">
+                            <div className="gap-3 count-3 mossonary">
+                                    <div className="gallery rounded-4 overflow-hidden">
 
-                    <Link>
-                        <div>
-                            <img src="/images/temp4.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                        </div>
-                    </Link>
+                                        <div className="gallery-item" >
 
-                    <Link>
-                        <div>
-                            <img src="/images/temp5.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                        </div>
-                    </Link>
+                                            <img src="/images/pic5.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
 
-                    <Link>
-                        <div>
-                            <img src="/images/temp4.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                        </div>
-                    </Link>
+                                            <div className="gallery-item-info">
 
-                    <Link>
-                        <div>
-                            <img src="/images/temp6.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                        </div>
-                    </Link>
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
 
-                    <Link>
-                        <div>
-                            <img src="/images/temp3.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                        </div>
-                    </Link>
+                                            </div>
 
-                    <Link>
-                        <div>
-                            <img src="/images/temp7.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                        </div>
-                    </Link>
-                    <Link>
-                        <div>
-                            <img src="/images/temp5.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                        </div>
-                    </Link>
+                                        </div>
+                                    </div>
 
-                    <Link>
-                        <div>
-                            <img src="/images/temp2.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                        </div>
-                    </Link>
+                                    <div className="gallery rounded-4 overflow-hidden">
 
-                    <Link>
-                        <div>
-                            <img src="/images/temp5.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                        </div>
-                    </Link>
+                                        <div className="gallery-item" >
 
-                    <Link>
-                        <div>
-                            <img src="/images/temp3.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                        </div>
-                    </Link>
+                                            <img src="/images/pic2.png" className="gallery-image w-100  shadow-bottom" alt="" />
 
-                    <Link>
-                        <div>
-                            <img src="/images/temp5.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                        </div>
-                    </Link>
+                                            <div className="gallery-item-info">
 
-                    <Link>
-                        <div>
-                            <img src="/images/temp2.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                        </div>
-                    </Link>
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
 
-                    <Link>
-                        <div>
-                            <img src="/images/temp3.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                        </div>
-                    </Link>
+                                            </div>
 
-                    <Link>
-                        <div>
-                            <img src="/images/temp5.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                        </div>
-                    </Link>
+                                        </div>
+                                    </div>
 
-                    <Link>
-                        <div>
-                            <img src="/images/temp2.jpg" className="w-100 rounded-4 shadow-bottom"/>
-                        </div>
-                    </Link>
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/pic5.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/pic2.png" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/pic5.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/pic4.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/pic6.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/pic7.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/pic3.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    {/* <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/pic2.png" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div> */}
+
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/pic5.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/pic3.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/pic1.png" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/pic2.png" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/pic1.png" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/pic7.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/pic1.png" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/pic7.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </Tab>
+                            <Tab eventKey="temples" title="Temples">
+                            <div className="gap-3 count-3 mossonary">
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/temp5.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/temp2.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/temp5.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/temp2.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/temp5.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/temp4.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/temp6.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/temp7.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/temp3.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/temp2.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/temp5.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/temp3.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/temp2.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/temp2.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/temp3.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/temp7.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/temp3.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div className="gallery rounded-4 overflow-hidden">
+
+                                        <div className="gallery-item" >
+
+                                            <img src="/images/temp7.jpg" className="gallery-image w-100  shadow-bottom" alt="" />
+
+                                            <div className="gallery-item-info">
+
+                                                <ul className="m-0 p-0 d-flex gap-3">
+                                                    <li className="gallery-item-likes"><span className="visually-hidden">Likes:</span><BsFillHeartFill className="fs-4" />56</li>
+                                                    <li className="gallery-item-comments"><span className="visually-hidden">Comments:</span><BsFillChatFill /> 2</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </Tab>
+                        </Tabs>
+
 
                     </Col>
                 </Row>
