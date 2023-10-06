@@ -11,6 +11,7 @@ import Community from "./pages/community";
 import Friends from "./pages/Friends";
 import Groups from "./pages/Groups";
 import FindFriends from "./pages/FindFriends";
+import AllFriends from "./pages/AllFriends";
 
 function Main() {
     return (
@@ -24,6 +25,7 @@ function Main() {
             <Route path="/friends" exact={true} element={<Friends />} />
             <Route path="/community" exact={true} element={<Community />} />
             <Route path="/find_friends" exact={true} element={<FindFriends />} />
+            <Route path="/add_friends" exact={true} element={<AllFriends />} />
 
             <Route path="*" element={<NotFound />} />
         </Routes>
