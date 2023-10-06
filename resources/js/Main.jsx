@@ -11,10 +11,6 @@ import Community from "./pages/community";
 import Friends from "./pages/Friends";
 import Groups from "./pages/Groups";
 import FindFriends from "./pages/FindFriends";
-import Addtemple from "./pages/Addtemple";
-import Uploadtemple from "./pages/Uploadtemple";
-
-
 function Main() {
     return (
         <Routes>
@@ -29,6 +25,7 @@ function Main() {
             <Route path="/Friends" exact={true} element={<Friends />} />
             <Route path="/Addtemple" exact={true} element={<Addtemple />} />
             <Route path="/Uploadtemple" exact={true} element={<Uploadtemple />} />
+            <Route path="/find_friends" exact={true} element={<FindFriends />} />
 
             <Route path="*" element={<NotFound />} />
         </Routes>
