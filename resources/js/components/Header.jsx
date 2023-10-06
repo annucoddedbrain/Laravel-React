@@ -15,8 +15,6 @@ function Header() {
             <Nav as="ul" className="d-flex align-items-center gap-5 ">
                 <Nav.Item as="li"><Link className="border border-3 p-1 rounded-5  text-body bg-body-secondary" to="/chat"><MdOutlineForum className="fs-4 icon"/></Link></Nav.Item>
                 <Nav.Item as="li"><Link className="btn btn-danger header-button" to="/Uploadtemple"> Add Temple</Link></Nav.Item>
-                <Nav.Item as="li"><Link className="border bg-body-secondary img-circle text-body" to="/chat"><MdOutlineForum className="fs-4 icon"/></Link></Nav.Item>
-                <Nav.Item as="li"><Link className="btn btn-danger header-button"> + Add Temple</Link></Nav.Item>
 
             </Nav>
         </header>
