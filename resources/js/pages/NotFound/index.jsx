@@ -35,7 +35,8 @@ export default function NotFound() {
     return (
         <Layout>
             {/* <h1 className="display-1">Not Found</h1> */}
-            <div ref={app} className="container"><span className="material-symbols-outlined search">search</span>
+            <div ref={app} className="container not-found">
+                <span className="material-symbols-outlined search">search</span>
                 <h1 className="h1">404</h1>
                 <h2>Not Found</h2>
             </div>
