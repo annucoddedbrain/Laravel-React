@@ -26,6 +26,7 @@ function Main() {
             <Route path="/Addtemple" exact={true} element={<Addtemple />} />
             <Route path="/Uploadtemple" exact={true} element={<Uploadtemple />} />
             <Route path="/find_friends" exact={true} element={<FindFriends />} />
+            <Route path="/all_friends" exact={true} element={<AllFriends />} />
 
             <Route path="*" element={<NotFound />} />
         </Routes>

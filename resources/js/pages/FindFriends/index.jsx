@@ -13,7 +13,7 @@ export default function FindFriends() {
             <header id="header" className="border d-flex header justify-content-between px-3 py-3 rounded shadow mb-3 flex-column flex-lg-row">
                 <Link to="/friends" className="btn  shadow-bottom friendrequest"> Suggestions</Link>
                 <Link to="/find_friends" className="btn btn-accent shadow-bottom friendrequest">Friend Request</Link>
-                <Link to="/add_friends"className="btn  shadow-bottom friendrequest"> All Friends</Link>
+                <Link to="/all_friends"className="btn  shadow-bottom friendrequest"> All Friends</Link>
             </header>
             <div className="h-100v bg-light w-100">
                 <Row className=" border-bottom">

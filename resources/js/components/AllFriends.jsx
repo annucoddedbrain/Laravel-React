@@ -2,19 +2,36 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-export default function FindFriend({ name }) {
+export default function AllFriends({ name }) {
     return (
-        <Row className="shadow mx-1 rounded-3">
-            <Col xs={4} className="d-flex p-3">
+<Row className="mt-4">
+        <Col xs={3}>
+            <div className="profile-image h-60 w-60 group-img">
                 <img src="/images/dummy.png" className="img-responsive" />
-            </Col>
-            <Col xs={8} className="d-flex flex-column justify-content-between my-3">
-                <h4 className="mt-4">{name}</h4>
-                <div className="d-flex gap-5 justify-content-between">
-                    <Link className="btn btn-danger w-50 rounded-2 header-button"> Confirm</Link>
-                    <Link className="btn bg-dark-subtle w-50 rounded-2 "> Delete</Link>
+            </div>
+        </Col>
+        <Col xs={6} className="d-flex align-items-center">
+            <div className="d-flex flex-column justify-content-start profile-info">
+                <h6 className="profile-name mb-1">{name}</h6>
+                <div className="group-mutuals">
+                    <div className="mutual-profile">
+                    <img src="/images/dummy.png" className="h-100 w-100 rounded-5"/>
+                    </div>
+                    <div className="mutual-profile">
+                    <img src="/images/dummy.png" className="h-100 w-100 rounded-5" />
+                    </div>
+                    <div className="mutual-profile">
+                    <img src="/images/dummy.png" className="h-100 w-100 rounded-5" />
+                    </div>
+                    <div className="mutual-profile">
+                        <img src="/images/dummy.png" className="h-100 w-100 rounded-5" />
+                    </div>
                 </div>
-            </Col>
-        </Row>
+            </div>
+        </Col>
+        <Col xs={3} className="d-flex align-items-center justify-content-center">
+            <Link className="btn join col w-100v h-50 p-0">Join</Link>
+        </Col>
+    </Row>
     )
 }
