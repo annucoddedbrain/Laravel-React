@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Layout from "../../components/Layout";
 import "./style.scss";
 import Container from 'react-bootstrap/Container';
@@ -8,15 +8,20 @@ import { Button, Modal, ModalHeader, Dropdown, Nav, Navbar } from "react-bootstr
 import { Card, Tab, Tabs } from "react-bootstrap";
 import { MdEditLocation, MdMoreVert, MdOutlineGroups, MdShare, MdThumbUp } from "react-icons/md";
 import { BsFillChatFill, BsFillHeartFill } from "react-icons/bs";
-import {IoBagCheck, IoLocationSharp, IoSchoolSharp} from "react-icons/io5"
+import { IoBagCheck, IoLocationSharp, IoSchoolSharp } from "react-icons/io5"
 import { FcCamera } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import GroupSuggestion from "../../components/GroupSuggestion";
 
+import Overlay from 'react-bootstrap/Overlay';
+
 
 export default function Profile() {
+    const [Addshow, setAddShow] = useState(false);
+    const target = useRef(null);
 
     const [show, setShow] = useState(false);
+    const [showEditProfile, setShowEditProfile] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -45,7 +50,7 @@ export default function Profile() {
                             </div>
                         </Col>
                         <Col xs={9} className=" d-flex justify-content-end align-items-center gap-4">
-                            <Link className="img-circle text-body btn-gray border h-auto w-auto"><MdMoreVert className="fs-2 p-1" onClick={handleShow} /></Link>
+                            <Link to="#" className="img-circle text-body btn-gray border h-auto w-auto"><MdMoreVert className="fs-2 p-1" onClick={handleShow} /></Link>
                             {/* <Link className="btn btn-gray h-auto  rounded-5 m-2">Edit Profile</Link> */}
                             <Modal show={show} onHide={handleClose}>
                                 <Modal.Header closeButton className="shadow-bottom">
@@ -53,53 +58,95 @@ export default function Profile() {
                                 </Modal.Header>
                                 <Modal.Body>
                                     <Row className="d-flex justify-content-center align-items-center">
-                                        <Col xs={6} className="d-flex fw-bold">Picture Profile
+                                        <Col xs={6} className="d-flex fw-bold"><a href="#">Picture Profile</a>
                                         </Col>
-                                        <Col xs={6} className="d-flex justify-content-center edit-text"> Edit</Col>
+                                        <Col xs={6} className="d-flex justify-content-center edit-text"><a href="#" onClick={() => setShowEditProfile(true)}>Edit</a>
+
+                                            <Modal show={showEditProfile} onHide={() => setShowEditProfile(false)}>
+                                                <Modal.Header closeButton className="shadow-bottom">
+                                                    <Modal.Title className="edit-text">Update Profile Picture</Modal.Title>
+                                                </Modal.Header>
+                                                <Modal.Body >
+                                                    <Col xs={5} className="d-flex align-items-center justify-content-lg-around">
+                                                        <Link className="text-body"><MdOutlineGroups className="fs-2" /></Link>
+                                                        <h5 className="profile-name mb-0">Groups</h5>
+                                                    </Col>
+
+                                                </Modal.Body>
+
+                                            </Modal>
+                                        </Col>
                                         <img src="/images/dummy.png" className="h-25 w-25 edit-profile" />
                                     </Row>
 
                                     <Row className="d-flex align-items-center mt-4">
-                                        <Col xs={6} className="d-flex fw-bold">Cover Profile
+                                        <Col xs={6} className="d-flex fw-bold"><a href="#">Cover Profile</a>
                                         </Col>
-                                        <Col xs={6} className="d-flex justify-content-center edit-text"> Edit</Col>
+                                        <Col xs={6} className="d-flex justify-content-center edit-text"> <a href="#">Edit</a></Col>
                                         <img src="/images/temp7.jpg" className="h-50 w-50 edit-Cover" />
                                     </Row>
 
                                     <Row className="d-flex justify-content-center align-items-center mt-4">
-                                        <Col xs={6} className="d-flex fw-bold">Bio
+                                        <Col xs={6} className="d-flex fw-bold"><a href="#">Bio</a>
                                         </Col>
-                                        <Col xs={6} className="d-flex justify-content-center edit-text">Add</Col>
+                                        <Col xs={6} className="d-flex justify-content-center edit-text"><a href="#">Add</a></Col>
                                     </Row>
 
                                     <Row className="d-flex justify-content-center align-items-center mt-4">
-                                        <Col xs={6} className="d-flex  fw-bold">Customize your intro
+                                        <Col xs={6} className="d-flex  fw-bold"><a href="#">Customize your intro</a>
                                         </Col>
-                                        <Col xs={6} className="d-flex justify-content-center edit-text">Add</Col>
+                                        <Col xs={6} className="d-flex justify-content-center edit-text"><a href="#" variant="danger" ref={target} onClick={() => setAddShow(!show)}>Add</a>
+                                            <Overlay target={target.current} show={Addshow} placement="right">
+                                                {({
+                                                    placement: _placement,
+                                                    arrowProps: _arrowProps,
+                                                    show: _show,
+                                                    popper: _popper,
+                                                    hasDoneInitialMeasure: _hasDoneInitialMeasure,
+                                                    ...props
+                                                }) => (
+                                                    <div
+                                                        {...props}
+                                                        style={{
+                                                            position: 'absolute',
+                                                            backgroundColor: 'rgba(255, 100, 100, 0.85)',
+                                                            padding: '2px 10px',
+                                                            color: 'white',
+                                                            borderRadius: 3,
+                                                            ...props.style,
+                                                        }}
+                                                    >
+                                                        Simple tooltip
+                                                    </div>
+                                                )}
+                                            </Overlay>
+                                        </Col>
                                     </Row>
 
                                     <Row>
                                         <Col xs={12}>
                                             <Navbar>
-                                            <Nav as="ul" className="flex-column w-100">
-                                                <Nav.Item as="li">
-                                                    <Link className="nav-link d-flex"> <MdEditLocation className="me-3 fs-4 text" /><b className="text">Current City</b></Link>
-                                                </Nav.Item>
-                                                <Nav.Item as="li">
-                                                    <Link className="nav-link d-flex"> <IoBagCheck className="me-3 fs-4 icon" /><b className="text">WorksPlace</b></Link>
-                                                </Nav.Item>
+                                                <Nav as="ul" className="flex-column w-100">
+                                                    <Nav.Item as="li">
+                                                        <Link className="nav-link d-flex"> <MdEditLocation className="me-3 fs-4 text" /><b className="text">Current City</b></Link>
+                                                    </Nav.Item>
+                                                    <Nav.Item as="li">
+                                                        <Link className="nav-link d-flex"> <IoBagCheck className="me-3 fs-4 icon" /><b className="text">WorksPlace</b></Link>
+                                                    </Nav.Item>
 
-                                                <Nav.Item as="li">
-                                                    <Link className="nav-link d-flex"> <IoSchoolSharp className="me-3 fs-4 icon" /><b className="text">School</b></Link>
-                                                </Nav.Item>
-                                                <Nav.Item as="li">
-                                                    <Link className="nav-link d-flex"> <IoLocationSharp className="me-3 fs-4 icon" /><b className="text">Hometown</b></Link>
-                                                </Nav.Item>
-                                            </Nav>
+                                                    <Nav.Item as="li">
+                                                        <Link className="nav-link d-flex"> <IoSchoolSharp className="me-3 fs-4 icon" /><b className="text">School</b></Link>
+                                                    </Nav.Item>
+                                                    <Nav.Item as="li">
+                                                        <Link className="nav-link d-flex"> <IoLocationSharp className="me-3 fs-4 icon" /><b className="text">Hometown</b></Link>
+                                                    </Nav.Item>
+                                                </Nav>
                                             </Navbar>
                                         </Col>
                                     </Row>
                                 </Modal.Body>
+
+
                                 <Modal.Footer>
                                     <Button variant="gray" onClick={handleClose} className="w-100 fw-900 text-capitalize shadow-bottom edit-text">
                                         Edit About info
