@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./style.scss";
 import Layout from "../../components/Layout";
-
 import Header from "../../components/Header";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { FaImages, FaRegSmile, FaRegComment } from "react-icons/fa";
-import { FiHeart, FiSend } from "react-icons/fi";
+import { FaImages, FaRegSmile } from "react-icons/fa";
 import { MdMoreHoriz, MdMoreVert } from "react-icons/md";
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -16,7 +13,7 @@ import 'swiper/scss';
 import 'swiper/scss/free-mode';
 import 'swiper/scss/pagination';
 import 'swiper/scss/mousewheel';
-import { FreeMode, Pagination, Mousewheel } from 'swiper/modules';
+import { FreeMode,  Mousewheel } from 'swiper/modules';
 import PostCard from "../../components/PostCard";
 
 
@@ -204,7 +201,7 @@ export default function Home() {
                             </Col>
 
                             <Col xs={5} >
-                                <img src="/images/kedarnath1.jpg" className="w-75 mx-4 kedarnath " />
+                                <img src="/images/kedarnath1.jpg" className="w-75 mx-4 kedarnath"/>
                             </Col>
                         </Row>
 

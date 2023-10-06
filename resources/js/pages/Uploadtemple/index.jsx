@@ -3,14 +3,14 @@ import "./style.scss";
 import Layout from "../../components/Layout";
 import { Card, Col, Container, Form, FormCheck, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { MdOutlineAttachment } from "react-icons/md";
+import { MdOutlineAttachment, MdPhotoCamera } from "react-icons/md";
 
 
 
 
 
 export default function Uploadtemple() {
-    const [havePriestDetails, setHavePriestDetails] = useState( true )
+    const [havePriestDetails, setHavePriestDetails] = useState(true)
     return (
         <Layout>
             <Container fluid>
@@ -100,37 +100,37 @@ export default function Uploadtemple() {
 
                         <Row className="my-3">
                             <Col>
-                                <FormCheck id="dnhp" label="I don't have priest details." onChange={() => setHavePriestDetails( !havePriestDetails)}/>
+                                <FormCheck id="dnhp" label="I don't have priest details." onChange={() => setHavePriestDetails(!havePriestDetails)} />
                             </Col>
                         </Row>
-                        { havePriestDetails && <Row>
+                        {havePriestDetails && <Row>
                             <Col xs={4}>
                                 <fieldset>
-                                    <Form.Control  placeholder="Priest Name" type="text" />
+                                    <Form.Control placeholder="Priest Name" type="text" />
                                 </fieldset>
                             </Col>
                             <Col xs={4}>
                                 <fieldset>
-                                    <Form.Control  placeholder="Priest Role" type="text"></Form.Control>
+                                    <Form.Control placeholder="Priest Role" type="text"></Form.Control>
                                 </fieldset>
                             </Col>
                             <Col xs={4}>
                                 <fieldset>
-                                    <Form.Control  placeholder="Priest Mob No." type="integer"></Form.Control >
+                                    <Form.Control placeholder="Priest Mob No." type="integer"></Form.Control >
                                 </fieldset>
                             </Col>
-                        </Row> }
+                        </Row>}
 
 
                         <Row>
                             <Col xs={4}>
-                                <Link className="btn btn-light border shadow-bottom w-100 p-5 my-3 selfie_with_temple" to="">Selfie With Temple</Link>
+                                <Link className="btn btn-light border shadow-bottom w-100 p-4 my-3 selfie_with_temple" to=""> <MdPhotoCamera className="d-flex mx-auto fs-4" />Selfie With Temple</Link>
                             </Col>
                             <Col xs={4}>
-                                <Link className="btn btn-light border shadow-bottom w-100 p-5 my-3 selfie_with_temple" to="">Temple Front</Link>
+                                <Link className="btn btn-light border shadow-bottom w-100 p-4 my-3 Temple_Front" to=""> <MdPhotoCamera className="d-flex mx-auto fs-4" />Temple Front</Link>
                             </Col>
                             <Col xs={4}>
-                                <Link className="btn btn-light border shadow-bottom w-100 p-5 my-3 selfie_with_temple" to="">More Images</Link>
+                                <Link className="btn btn-light border shadow-bottom w-100 p-4 my-3 More_Images" to=""> <MdPhotoCamera className="d-flex mx-auto fs-4" />More Images</Link>
                             </Col>
                         </Row>
 
