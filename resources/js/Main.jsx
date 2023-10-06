@@ -11,6 +11,8 @@ import Community from "./pages/community";
 import Friends from "./pages/Friends";
 import Groups from "./pages/Groups";
 import FindFriends from "./pages/FindFriends";
+import AllFriends from "./pages/AllFriends";
+
 function Main() {
     return (
         <Routes>
