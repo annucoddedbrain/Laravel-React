@@ -68,6 +68,18 @@
     color: #fff
 }
 
+.edit-text{
+    color: #f75e0a;
+    font-weight: bold;
+}
+.edit-profile{
+    margin-left: 2%;
+    margin-top: 15px;
+}
+.edit-Cover{
+    margin-left: 21%;
+    margin-top: 15px;
+}
 
 @mixin keyframes($name) {
     @-webkit-keyframes #{$name} {

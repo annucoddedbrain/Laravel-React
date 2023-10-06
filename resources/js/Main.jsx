@@ -10,9 +10,8 @@ import Chat from "./pages/Chat";
 import Community from "./pages/community";
 import Friends from "./pages/Friends";
 import Addtemple from "./pages/Addtemple";
-import Uploadtemple from "./pages/Uploadtemple";
-
-
+import Uploadtemple from "./pages/Uploadtemple";import Groups from "./pages/Groups";
+import FindFriends from "./pages/FindFriends";
 function Main() {
     return (
         <Routes>
@@ -21,10 +20,13 @@ function Main() {
             <Route path="/profile" exact={true} element={<Profile />} />
             <Route path="/temple" exact={true} element={<Temple />} />
             <Route path="/chat" exact={true} element={<Chat />} />
+            <Route path="/groups" exact={true} element={<Groups />} />
+            <Route path="/friends" exact={true} element={<Friends />} />
             <Route path="/community" exact={true} element={<Community />} />
             <Route path="/Friends" exact={true} element={<Friends />} />
             <Route path="/Addtemple" exact={true} element={<Addtemple />} />
             <Route path="/Uploadtemple" exact={true} element={<Uploadtemple />} />
+            <Route path="/find_friends" exact={true} element={<FindFriends />} />
 
             <Route path="*" element={<NotFound />} />
         </Routes>

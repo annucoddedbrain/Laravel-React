@@ -7,9 +7,11 @@ body {
     --bs-body-bg-rgb: 251, 251, 251;
 }
 
+
 .h-100v {
     height: 100vh;
 }
+
 
 
 @for $i from 1 through 9 {
@@ -159,7 +161,6 @@ body {
         column-count: $i;
     }
 }
-
 
 
 .post-body img{
