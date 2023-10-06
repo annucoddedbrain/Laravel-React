@@ -61,7 +61,7 @@ export default function Profile() {
                                         <Col xs={6} className="d-flex fw-bold"><a href="#">Picture Profile</a>
                                         </Col>
                                         <Col xs={6} className="d-flex justify-content-center edit-text"><a href="#" onClick={() => setShowEditProfile(true)}>Edit</a>
-
+                                            
                                             <Modal show={showEditProfile} onHide={() => setShowEditProfile(false)}>
                                                 <Modal.Header closeButton className="shadow-bottom">
                                                     <Modal.Title className="edit-text">Update Profile Picture</Modal.Title>
