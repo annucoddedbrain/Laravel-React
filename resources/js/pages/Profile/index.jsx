@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../../components/Layout";
 import "./style.scss";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Button, Modal, ModalHeader, Dropdown, Nav, Navbar } from "react-bootstrap";
 import { Card, Tab, Tabs } from "react-bootstrap";
-import { MdMoreVert, MdOutlineGroups, MdShare, MdThumbUp } from "react-icons/md";
+import { MdEditLocation, MdMoreVert, MdOutlineGroups, MdShare, MdThumbUp } from "react-icons/md";
 import { BsFillChatFill, BsFillHeartFill } from "react-icons/bs";
+import {IoBagCheck, IoLocationSharp, IoSchoolSharp} from "react-icons/io5"
 import { FcCamera } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import GroupSuggestion from "../../components/GroupSuggestion";
@@ -14,6 +16,10 @@ import GroupSuggestion from "../../components/GroupSuggestion";
 
 export default function Profile() {
 
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     window.addEventListener("scroll", function () {
         if (window.scrollY >= 50) {
@@ -39,7 +45,69 @@ export default function Profile() {
                             </div>
                         </Col>
                         <Col xs={9} className=" d-flex justify-content-end align-items-center gap-4">
-                            <Link className="img-circle text-body btn-gray border h-auto w-auto"><MdMoreVert className="fs-2 p-1" /></Link>
+                            <Link className="img-circle text-body btn-gray border h-auto w-auto"><MdMoreVert className="fs-2 p-1" onClick={handleShow} /></Link>
+                            {/* <Link className="btn btn-gray h-auto  rounded-5 m-2">Edit Profile</Link> */}
+                            <Modal show={show} onHide={handleClose}>
+                                <Modal.Header closeButton className="shadow-bottom">
+                                    <Modal.Title className="edit-text">Edit Profile</Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>
+                                    <Row className="d-flex justify-content-center align-items-center">
+                                        <Col xs={6} className="d-flex fw-bold">Picture Profile
+                                        </Col>
+                                        <Col xs={6} className="d-flex justify-content-center edit-text"> Edit</Col>
+                                        <img src="/images/dummy.png" className="h-25 w-25 edit-profile" />
+                                    </Row>
+
+                                    <Row className="d-flex align-items-center mt-4">
+                                        <Col xs={6} className="d-flex fw-bold">Cover Profile
+                                        </Col>
+                                        <Col xs={6} className="d-flex justify-content-center edit-text"> Edit</Col>
+                                        <img src="/images/temp7.jpg" className="h-50 w-50 edit-Cover" />
+                                    </Row>
+
+                                    <Row className="d-flex justify-content-center align-items-center mt-4">
+                                        <Col xs={6} className="d-flex fw-bold">Bio
+                                        </Col>
+                                        <Col xs={6} className="d-flex justify-content-center edit-text">Add</Col>
+                                    </Row>
+
+                                    <Row className="d-flex justify-content-center align-items-center mt-4">
+                                        <Col xs={6} className="d-flex  fw-bold">Customize your intro
+                                        </Col>
+                                        <Col xs={6} className="d-flex justify-content-center edit-text">Add</Col>
+                                    </Row>
+
+                                    <Row>
+                                        <Col xs={12}>
+                                            <Navbar>
+                                            <Nav as="ul" className="flex-column w-100">
+                                                <Nav.Item as="li">
+                                                    <Link className="nav-link d-flex"> <MdEditLocation className="me-3 fs-4 text" /><b className="text">Current City</b></Link>
+                                                </Nav.Item>
+                                                <Nav.Item as="li">
+                                                    <Link className="nav-link d-flex"> <IoBagCheck className="me-3 fs-4 icon" /><b className="text">WorksPlace</b></Link>
+                                                </Nav.Item>
+
+                                                <Nav.Item as="li">
+                                                    <Link className="nav-link d-flex"> <IoSchoolSharp className="me-3 fs-4 icon" /><b className="text">School</b></Link>
+                                                </Nav.Item>
+                                                <Nav.Item as="li">
+                                                    <Link className="nav-link d-flex"> <IoLocationSharp className="me-3 fs-4 icon" /><b className="text">Hometown</b></Link>
+                                                </Nav.Item>
+                                            </Nav>
+                                            </Navbar>
+                                        </Col>
+                                    </Row>
+                                </Modal.Body>
+                                <Modal.Footer>
+                                    <Button variant="gray" onClick={handleClose} className="w-100 fw-900 text-capitalize shadow-bottom edit-text">
+                                        Edit About info
+                                    </Button>
+                                </Modal.Footer>
+                            </Modal>
+
+
                             <Link className="img-circle text-body btn-gray border h-auto w-auto"><MdShare className="fs-2 p-1" /></Link>
                             <Link className="btn btn-gray h-auto  rounded-5 m-2">Temple Post</Link>
 
@@ -151,7 +219,7 @@ export default function Profile() {
                             className="mb-3 justify-content-center"
                         >
                             <Tab eventKey="posts" title="Posts">
-                            <div className="gap-3 count-3 mossonary">
+                                <div className="gap-3 count-3 mossonary">
                                     <div className="gallery rounded-4 overflow-hidden">
 
                                         <div className="gallery-item" >
@@ -483,7 +551,7 @@ export default function Profile() {
                                 </div>
                             </Tab>
                             <Tab eventKey="temples" title="Temples">
-                            <div className="gap-3 count-3 mossonary">
+                                <div className="gap-3 count-3 mossonary">
                                     <div className="gallery rounded-4 overflow-hidden">
 
                                         <div className="gallery-item" >

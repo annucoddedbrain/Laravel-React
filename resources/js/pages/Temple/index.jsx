@@ -116,7 +116,7 @@ export default function Temple() {
         <Layout>
             <Header />
             <Row>
-                <Col xs={12} className="d-flex gap-5  mb-4 mx-5">
+                <Col xs={12} className="d-flex gap-5  mb-4">
                     <Link className="btn bg-dark-subtle shadow-bottom"> Near By Temple</Link>
                     <Link className="btn bg-dark-subtle shadow-bottom"> Temple By Name</Link>
                     <Link >
@@ -147,7 +147,7 @@ export default function Temple() {
                 </Col>
             </Row>
 
-            <Modal show={show} onHide={handleClose}>
+            <Modal show={show} onHide={handleClose} className="temple-modal">
 
                 <Modal.Body >
                     <Row>
