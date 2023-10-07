@@ -16,6 +16,7 @@ import Addtemple from "./pages/Addtemple";
 import Uploadtemple from "./pages/Uploadtemple";
 
 import Admin, { Saurav, ATemples, AUsers } from "./admin";
+import EditPost from "./pages/EditPost";
 
 function Main() {
     return (
@@ -33,6 +34,7 @@ function Main() {
             <Route path="/Uploadtemple" exact={true} element={<Uploadtemple />} />
             <Route path="/find_friends" exact={true} element={<FindFriends />} />
             <Route path="/all_friends" exact={true} element={<AllFriends />} />
+            <Route path="/edit_post" exact={true} element={<EditPost />} />
 
             {/* Admin Routes */}
             <Route path="admin" >

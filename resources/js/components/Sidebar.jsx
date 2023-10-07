@@ -114,6 +114,8 @@ export default function Sidebar() {
                     <NotificationSugg />
                     <NotificationSugg />
                     <NotificationSugg />
+                    <NotificationSugg />
+                    <NotificationSugg />
 
                 </Toast.Body>
             </Toast>
