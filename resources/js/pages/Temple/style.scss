@@ -75,6 +75,34 @@ Flexbox and floats are used as a fallback so that browsers which don't support g
     --bs-modal-width: 75%;
 }
 
+.rs-rounded-0 div{
+    border-radius: 0 !important;
+}
+
+.d\:after-none::after{
+    display: none;
+}
+.btn-none{
+    --bs-btn-color: #333;
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: transparent;
+    --bs-btn-hover-color: #999;
+    --bs-btn-hover-bg: transparent;
+    --bs-btn-hover-border-color: transparent;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #999;
+    --bs-btn-active-bg: transparent;
+    --bs-btn-active-border-color: transparent;
+    --bs-btn-active-shadow: none;
+    --bs-btn-disabled-color: transparent;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: transparent;
+}
+.dropdown-bg\:active-none:active{
+   --bs-dropdown-link-active-color: #333; 
+    text-decoration: none;
+     --bs-dropdown-link-active-bg: none;
+}
 
 
 
