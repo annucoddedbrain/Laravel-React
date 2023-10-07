@@ -34,24 +34,24 @@ export default function AllFriends() {
                 </Row>
                 <Container fluid>
                     <Row className="friends ">
-                    <h5 className="mb-0 mt-3 p-0 text-body-secondary">12,100 friends</h5>
+                    <h5 className="mb-0 mt-2 p-0 text-body-secondary">12,100 friends</h5>
                         <Col xs={12} className="border-bottom border-2 p-1">
-                            <AllFriendsSuggestion name="Rakhi Chaudhary" mutual="100+ mutual friends" />
+                            <AllFriendsSuggestion name="Rakhi Chaudhary" mutual="+100 mutual friends" />
                         </Col>
                         <Col xs={12} className="border-bottom border-3 p-1">
-                            <AllFriendsSuggestion name="Vishesh Thakur" mutual="20+ mutual friends"/>
+                            <AllFriendsSuggestion name="Vishesh Thakur" mutual="+20 mutual friends"/>
                         </Col>
                         <Col xs={12} className="border-bottom border-3 p-1">
-                            <AllFriendsSuggestion name="Amit Rajput" mutual="5+ mutual friends"/>
+                            <AllFriendsSuggestion name="Amit Rajput" mutual="+5 mutual friends"/>
                         </Col>
                         <Col xs={12} className="border-bottom border-3 p-1">
-                            <AllFriendsSuggestion name="Arvind Gautam" mutual="40+ mutual friends"/>
+                            <AllFriendsSuggestion name="Arvind Gautam" mutual="+40 mutual friends"/>
                         </Col>
                         <Col xs={12} className="border-bottom border-3 p-1">
-                            <AllFriendsSuggestion name="Rajesh Sharma" mutual="10+ mutual friends"/>
+                            <AllFriendsSuggestion name="Rajesh Sharma" mutual="+10 mutual friends"/>
                         </Col>
                         <Col xs={12} className="border-bottom border-3 p-1">
-                            <AllFriendsSuggestion name="Ishan Khan" mutual="12+ mutual friends"/>
+                            <AllFriendsSuggestion name="Ishan Khan" mutual="+12 mutual friends"/>
                         </Col>
                     </Row>
                 </Container>

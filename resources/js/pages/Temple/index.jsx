@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "./style.scss";
 import Header from "../../components/Header";
 import Layout from "../../components/Layout";
-import { Row, Col, Button, Modal, ModalHeader, Dropdown } from "react-bootstrap";
+import { Row, Col, Button, Modal, ModalHeader, Dropdown, Form, InputGroup } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { MdMoreHoriz } from "react-icons/md";
+import { MdMoreHoriz, MdOutlineSearch } from "react-icons/md";
 import { BiHeart } from "react-icons/bi";
 import { FiBookmark, FiSend, FiSmile } from "react-icons/fi";
 import { FiMessageCircle } from "react-icons/fi";
@@ -114,15 +114,28 @@ export default function Temple() {
 
     return (
         <Layout>
-            <Header />
-            <Row>
-                <Col xs={12} className="d-flex gap-5  mb-4">
-                    <Link className="btn bg-dark-subtle shadow-bottom"> Near By Temple</Link>
-                    <Link className="btn bg-dark-subtle shadow-bottom"> Temple By Name</Link>
-                    <Link >
+            <Row className="border shadow-bottom px-2 m-2 py-2 rounded shadow mb-3 flex-column flex-lg-row">
+                <Col xs={4} className=" border p-0">
+                    <Row>
+                        <Col xs={12} className="d-flex justify-content-center">
+                            <Form className="w-100">
+                                <InputGroup>
+                                    <Form.Control type="text" placeholder="Temple Name" className="rounded-0 "></Form.Control>
+                                    <InputGroup.Text className="rounded-0"><MdOutlineSearch className="fs-4" /></InputGroup.Text>
+                                </InputGroup>
+                            </Form>
+                        </Col>
+                    </Row>
+                </Col>
+                <Col xs={4} className="border ">
+                    <Row className="d-flex justify-content-evenly align-items-center">
+                        <Col xs={8} className="d-flex justify-content-center">
+                        <h6 className="mt-2">Temple Location</h6>
+                        </Col>
+                        <Col xs={4} className="d-flex justify-content-evenly align-items-center">
                         <Dropdown>
-                            <Dropdown.Toggle className="btn bg-dark-subtle border text-dark shadow-bottom ">
-                                Location
+                            <Dropdown.Toggle className="text-muted border-0 bg-body">
+                           
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu>
@@ -132,12 +145,34 @@ export default function Temple() {
                                 <Dropdown.Item href="#/action-3">Mumbai</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
-                    </Link>
-                    {/* <Link className="btn bg-dark-subtle shadow-bottom"> Delhi</Link>
-                    <Link className="btn bg-dark-subtle shadow-bottom"> Uttar Pardesh</Link>
-                    <Link className="btn bg-dark-subtle shadow-bottom"> Pune</Link> */}
+                       </Col>
+                    </Row>
+                </Col>
+                <Col xs={3} className="d-flex justify-content-center border border ">
+                    <Row className="d-flex justify-content-evenly align-items-center">
+                        <Col xs={9} className="d-flex justify-content-center">
+                        <h6 className="mt-2">Your Location</h6>
+                        </Col>
+                        <Col xs={3} className="d-flex justify-content-evenly align-items-center">
+                        <Dropdown>
+                            <Dropdown.Toggle className="text-muted border-0 bg-body"></Dropdown.Toggle>
+
+                            <Dropdown.Menu>
+                                <Dropdown.Item href="#/action-1">Delhi</Dropdown.Item>
+                                <Dropdown.Item href="#/action-2">Uttar Pardesh</Dropdown.Item>
+                                <Dropdown.Item href="#/action-3">Pune</Dropdown.Item>
+                                <Dropdown.Item href="#/action-3">Mumbai</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
+                       </Col>
+                    </Row>
+                    
+                </Col>
+                <Col xs={1} className=" btn btn-accent rounded-0 d-flex justify-content-center align-items-center border border ">
+                    <MdOutlineSearch className="fs-4 " />
                 </Col>
             </Row>
+
             <Row>
                 <Col xs={12} className="gap-3 count-3 mossonary">
                     {shuffle(images).map((image, k) => <GalleryItem image={image} name="Hanuman Mandir" loaction="Faridabad,Haryana" onClick={handleShow} key={k} />)}
