@@ -45,7 +45,7 @@ function Main() {
                 <Route path="users" element={<AUsers />} exact></Route>
             </Route>
 
-            {/* {  <Route path="*" element={<NotFound />} /> } */}
+             <Route path="*" element={<NotFound />} />
         </Routes>
     )
 }

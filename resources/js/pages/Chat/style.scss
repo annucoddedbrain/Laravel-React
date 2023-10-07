@@ -10,18 +10,11 @@
             max-height: 100vh;
         }
 
-        .nnn{
-            background-color: #ebecf8;
-        }
-
 
 
 //
 
 /* Styling the chat box container */
-.chat-page {
-    padding: 0 0 50px 0;
-}
 
 .msg-inbox {
     border: 1px solid #ccc;
@@ -121,45 +114,71 @@
 
 
 /* Styling the avatar  */
-received-chats-img {
-    display: inline-block;
-    width: 50px;
+
+:focus-visible {
+    outline: -webkit-focus-ring-color auto 0px;
 }
 
-.received-msg {
-    display: inline-block;
-    padding: 0 0 0 10px;
-    vertical-align: top;
-    width: 92%;
-}
-.received-msg-inbox {
-    width: 45%;
+.conversation {
+    margin-bottom: 10px;
+    display: flex;
 }
 
-.received-msg-inbox p {
-    background: #ffff;
-    border-radius: 10px;
-    color: #000000;
-    font-size: 14px;
-    // margin-left: 1rem;
-    padding: 1rem;
+.conversation span.time {
+    margin: 0;
+    margin-left: 8px;
+}
+
+span.message {
+    background: #ececec;
+    padding: 5px 10px;
+    border-radius: 18px;
+    font-size: 0.9em;
+    line-height: 1.4;
     width: 100%;
-    box-shadow: rgb(0 0 0 / 25%) 0px 5px 5px 2px;
-}
-    p {
-    overflow-wrap: break-word;
 }
 
-/* Styling the msg-sent time  */
-.time {
-    color: #000000;
-    display: block;
-    font-size: 12px;
-    margin: 8px 0 0;
+.message-wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    width: 40%;
+}
+
+.conversation.receive {
+    justify-content: flex-start;
+}
+
+.conversation.send {
+    justify-content: flex-end;
+}
+
+.conversation.send .message-wrapper {
+    align-items: flex-end;
 }
 
 
-//
+.chat-wrapper{
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    & .chat-footer {
+        position: fixed;
+        bottom: 0;
+        width: -webkit-fill-available;
+        background-color: #ebecf8;
+    }
+
+    & .chat-header {
+        width: -webkit-fill-available;
+        background-color: #ebecf8;
+    }
+
+    & .chat-body {
+        height: calc( 100% - 125px );
+        overflow-y: auto;
+    }
+}
 
 
 
@@ -191,6 +210,12 @@ received-chats-img {
     width: 50px;
     margin-right: 1rem;
 }
+
+.nnn {
+    background-color: #ebecf8;
+}
+
+
 
 
 

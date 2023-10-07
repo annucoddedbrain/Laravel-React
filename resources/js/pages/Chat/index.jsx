@@ -1,5 +1,4 @@
-import React from "react";
-import "./style.scss";
+import React, { useEffect, useRef, useState } from "react";
 import Layout from "../../components/Layout";
 import { Col, Container, Row } from "react-bootstrap";
 import { AiOutlineVideoCamera, AiOutlineSearch, AiOutlineMore } from "react-icons/ai";
@@ -7,13 +6,25 @@ import { MdGroups2, MdChat, MdMoreVert, MdOutlineSearch, MdMenu, MdKeyboardVoice
 import { Form, InputGroup } from "react-bootstrap";
 import { BiFilter } from "react-icons/bi";
 import { Link } from "react-router-dom";
-
-
+import "./style.scss";
 
 
 export default function Chat() {
+
+    const chatHeaderRef = useRef();
+    const chatFooterRef = useRef();
+
+    const [chatBodyHeight, setChatBodyHeight] = useState('calc(100% - 130px )');
+
+    useEffect(() => {
+        const hfHeight = chatHeaderRef.current.clientHeight + chatFooterRef.current.clientHeight;
+
+        setChatBodyHeight(`calc(100% - ${hfHeight}px)`);
+
+    }, []);
+
     return (
-        <Layout className="pt-0">
+        <Layout className="pt-0 pe-0 pb-0">
             <Container fluid >
                 <Row >
                     <Col xs={5} className="scroll">
@@ -69,7 +80,7 @@ export default function Chat() {
 
                             <Col xs={2}>
                                 <div className="profile-image mt-1">
-                                    <img src="/images/dummy.png" className="img-responsive"/>
+                                    <img src="/images/dummy.png" className="img-responsive" />
                                 </div>
                             </Col>
                             <Col xs={6} className="d-flex align-items-center ">
@@ -88,7 +99,7 @@ export default function Chat() {
 
                             <Col xs={2}>
                                 <div className="profile-image mt-1">
-                                    <img src="/images/dummy.png" className="img-responsive"/>
+                                    <img src="/images/dummy.png" className="img-responsive" />
                                 </div>
                             </Col>
                             <Col xs={6} className="d-flex align-items-center ">
@@ -107,7 +118,7 @@ export default function Chat() {
 
                             <Col xs={2}>
                                 <div className="profile-image mt-1">
-                                    <img src="/images/dummy.png" className="img-responsive"/>
+                                    <img src="/images/dummy.png" className="img-responsive" />
                                 </div>
                             </Col>
                             <Col xs={6} className="d-flex align-items-center ">
@@ -126,7 +137,7 @@ export default function Chat() {
 
                             <Col xs={2}>
                                 <div className="profile-image mt-1">
-                                    <img src="/images/dummy.png" className="img-responsive"/>
+                                    <img src="/images/dummy.png" className="img-responsive" />
                                 </div>
                             </Col>
                             <Col xs={6} className="d-flex align-items-center ">
@@ -145,7 +156,7 @@ export default function Chat() {
 
                             <Col xs={2}>
                                 <div className="profile-image mt-1">
-                                    <img src="/images/dummy.png" className="img-responsive"/>
+                                    <img src="/images/dummy.png" className="img-responsive" />
                                 </div>
                             </Col>
                             <Col xs={6} className="d-flex align-items-center ">
@@ -164,7 +175,7 @@ export default function Chat() {
 
                             <Col xs={2}>
                                 <div className="profile-image mt-1">
-                                    <img src="/images/dummy.png" className="img-responsive"/>
+                                    <img src="/images/dummy.png" className="img-responsive" />
                                 </div>
                             </Col>
                             <Col xs={6} className="d-flex align-items-center ">
@@ -183,7 +194,7 @@ export default function Chat() {
 
                             <Col xs={2}>
                                 <div className="profile-image mt-1">
-                                    <img src="/images/dummy.png" className="img-responsive"/>
+                                    <img src="/images/dummy.png" className="img-responsive" />
                                 </div>
                             </Col>
                             <Col xs={6} className="d-flex align-items-center ">
@@ -202,7 +213,7 @@ export default function Chat() {
 
                             <Col xs={2}>
                                 <div className="profile-image mt-1">
-                                    <img src="/images/dummy.png" className="img-responsive"/>
+                                    <img src="/images/dummy.png" className="img-responsive" />
                                 </div>
                             </Col>
                             <Col xs={6} className="d-flex align-items-center ">
@@ -219,69 +230,89 @@ export default function Chat() {
 
                     </Col>
 
-                    <Col xs={7}>
-                        <Row className="nnn py-2">
-                            <Col xs={2}>
-                                <div className="profile-image">
-                                    <img src="/images/dummy.png" className="img-responsive"/>
-                                </div>
-                            </Col>
-                            <Col xs={6} className="d-flex align-items-center">
-                                <div className="d-flex flex-column justify-content-start profile-info">
-                                    <p className="profile-name mt-3">Sameer Tomar</p>
-                                </div>
-                            </Col>
-                            <Col xs={4} className="d-flex align-items-center justify-content-end gap-2 mb-3">
-                                <AiOutlineVideoCamera className="fs-4 "/>
-                                <AiOutlineSearch className="fs-4 mx-4"/>
-                                <AiOutlineMore className="fs-4"/>
+                    <Col xs={7} className="p-0">
+                        <div className="chat-wrapper">
+                            <div className="chat-header px-4 py-2 d-flex" ref={chatHeaderRef}>
+                                <Col xs={1}>
+                                    <div className="profile-image">
+                                        <img src="/images/dummy.png" className="img-responsive" />
+                                    </div>
+                                </Col>
+                                <Col xs={6}>
+                                    <div className="d-flex flex-column justify-content-start profile-info mx-3">
+                                        <p className="profile-name mt-3">Sameer Tomar</p>
+                                    </div>
+                                </Col>
+                                <Col className="d-flex align-items-center justify-content-end gap-2">
+                                    <Link><AiOutlineVideoCamera className="fs-4 " /></Link>
+                                    <Link><AiOutlineSearch className="fs-4 mx-4" /></Link>
+                                    <Link><AiOutlineMore className="fs-4" /></Link>
 
-                            </Col>
+                                </Col>
 
 
-                        </Row>
+                            </div>
 
-                        <div className="chat-page">
-                            <div className="chats">
-                                <div className="received-chats">
-                                    <div className="received-msg ">
-                                        <div className="received-msg-inbox">
-                                            <p>Hi, any update of Today ?</p>
-                                            <span className="time">18:06 PM </span>
+                            <div className="chat-page chat-body" style={{
+                                height: chatBodyHeight
+                            }}>
+                                <div className="chats">
+                                    <div className="conversation receive">
+                                        <div className="message-wrapper">
+                                            <span className="message">Hello,</span>
+                                            <span className="time">12:00</span>
+
                                         </div>
                                     </div>
-                                </div>
+                                    <div className="conversation send">
+                                        <div className="message-wrapper">
+                                            <span className="message">Hii</span>
+                                            <span className="time">12:05</span>
 
-                                <div className="outgoing-chats">
-                                    <div className="outgoing-msg">
-                                        <div className="outgoing-chats-msg">
-                                            <p className="multi-msg">Hi Sameer
-                                            </p>
-                                            <p className="multi-msg">No there is no update for today</p>
-                                            <span className="time">18:30 PM</span>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="received-chats">
-                                    <div className="received-msg ">
-                                        <div className="received-msg-inbox">
-                                            <p>Ok Sir,Thankyou</p>
-                                            <span className="time">19:24 PM </span>
+                                    <div className="conversation send">
+                                        <div className="message-wrapper">
+                                            <span className="message">How are you</span>
+                                            <span className="time">12:05</span>
+
+                                        </div>
+                                    </div><div className="conversation receive">
+                                        <div className="message-wrapper">
+                                            <span className="message">I Am Fine</span>
+                                            <span className="time">12:15</span>
+
+                                        </div>
+                                    </div>
+                                    <div className="conversation send">
+                                        <div className="message-wrapper">
+                                            <span className="message">Good</span>
+                                            <span className="time">12:30</span>
+
+                                        </div>
+                                    </div>
+                                    <div className="conversation">
+                                        <div className="message-wrapper">
+                                            <span className="message">Hello,</span>
+                                            <span className="time">15:00</span>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div className="msg-bottom">
+                            <div className="chat-footer" ref={chatFooterRef}>
 
-                            <div className="group">
-                                <span className="input-group-text send-icon"><MdOutlineEmojiEmotions className="fs-4"></MdOutlineEmojiEmotions></span>
-                                <span className="input-group-text send-icon"><MdAdd className="fs-4"></MdAdd></span>
-                                <input type="text" className="control" placeholder="Type a msg"></input>
-                                <div className="input-group-append ">
-                                    <span className="input-group-text send-icon"><MdKeyboardVoice className="fs-4"></MdKeyboardVoice>
-                                    </span>
+                                <div className="gap-2 d-flex justify-content-between py-2 px-3">
+                                    <div className="d-flex gap-3">
+                                        <span className="input-group-text send-icon"><MdOutlineEmojiEmotions className="fs-4"></MdOutlineEmojiEmotions></span>
+                                        <span className="input-group-text send-icon"><MdAdd className="fs-4"></MdAdd></span>
+                                    </div>
+                                    <input type="text" className="control" placeholder="Type a msg"></input>
+                                    <div className="input-group-append ">
+                                        <span className="input-group-text send-icon"><MdKeyboardVoice className="fs-4"></MdKeyboardVoice>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
