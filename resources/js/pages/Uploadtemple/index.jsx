@@ -32,16 +32,16 @@ export default function Uploadtemple() {
                         <form id="contact" action="" method="post" className="my-4">
 
                             <fieldset>
-                                <input className="shadow-bottom" placeholder="Temple name" type="text" tabindex="1" required autofocus></input >
+                                <input className="shadow-bottom" placeholder="Temple name" type="text" tabIndex="1" required autoFocus></input >
                             </fieldset>
                             <fieldset>
-                                <input className="shadow-bottom" placeholder=" Address" type="text" tabindex="2" required></input>
+                                <input className="shadow-bottom" placeholder=" Address" type="text" tabIndex="2" required></input>
                             </fieldset>
                             <fieldset>
-                                <input className="shadow-bottom w-100" placeholder="Tags" type="text" tabindex="3" required></input>
+                                <input className="shadow-bottom w-100" placeholder="Tags" type="text" tabIndex="3" required></input>
                             </fieldset>
                             <fieldset>
-                                <input className="shadow-bottom" placeholder="Location" type="text" tabindex="4" required ></input>
+                                <input className="shadow-bottom" placeholder="Location" type="text" tabIndex="4" required ></input>
                             </fieldset>
                         </form>
 
@@ -82,14 +82,14 @@ export default function Uploadtemple() {
                             <Row>
                                 <Col xs={6}>
                                     <fieldset >
-                                        < textarea placeholder="Establishment" type="text" tabindex="5" required className="w-100 h-100 comment shadow-bottom border"></textarea>
+                                        < textarea placeholder="Establishment" type="text" tabIndex="5" required className="w-100 h-100 comment shadow-bottom border"></textarea>
                                     </fieldset>
 
                                 </Col>
 
                                 <Col xs={6}>
                                     <fieldset>
-                                        < textarea placeholder="History" type="text" tabindex="6" required className="w-100 h-100 comment shadow-bottom border"></textarea>
+                                        < textarea placeholder="History" type="text" tabIndex="6" required className="w-100 h-100 comment shadow-bottom border"></textarea>
                                     </fieldset>
                                 </Col>
                             </Row>
@@ -138,12 +138,12 @@ export default function Uploadtemple() {
                             <Col xs={12}>
                                 <Row>
                                     <Col xs={4}>
-                                        <label for="appt">Temple Morning Open time:</label>
+                                        <label htmlFor="appt">Temple Morning Open time:</label>
                                         <input type="time" id="appt" name="appt"></input>
                                     </Col>
 
                                     <Col xs={4}>
-                                        <label for="appt">Temple Evening Open time:</label>
+                                        <label htmlFor="appt">Temple Evening Open time:</label>
                                         <input type="time" id="appt" name="appt"></input>
                                     </Col>
                                 </Row>
@@ -152,12 +152,12 @@ export default function Uploadtemple() {
 
                                 <Row className="my-2">
                                     <Col xs={4}>
-                                        <label for="appt">Temple Morning Close time:</label>
+                                        <label htmlFor="appt">Temple Morning Close time:</label>
                                         <input type="time" id="appt" name="appt"></input>
                                     </Col>
 
                                     <Col xs={4}>
-                                        <label for="appt">Temple Evening Close time:</label>
+                                        <label htmlFor="appt">Temple Evening Close time:</label>
                                         <input type="time" id="appt" name="appt"></input>
                                     </Col>
                                 </Row>
