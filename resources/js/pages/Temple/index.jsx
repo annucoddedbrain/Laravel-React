@@ -10,6 +10,7 @@ import { FiBookmark, FiSend, FiSmile } from "react-icons/fi";
 import { FiMessageCircle } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
 import GalleryItem from "../../components/GalleryItem";
+import ReactSelect from "react-select";
 
 export default function Temple() {
 
@@ -108,76 +109,49 @@ export default function Temple() {
 
     ]
 
+
+    const locationsOptions = [
+        {
+            value: 'delhi',
+            label: 'Delhi',
+        }
+    ]
+
     const shuffle = (array) => {
         return array.sort(() => Math.random() - 0.5);
     };
 
     return (
         <Layout>
-            <Row className="border shadow-bottom px-2 m-2 py-2 rounded shadow mb-3 flex-column flex-lg-row">
-                <Col xs={4} className=" border p-0">
-                    <Row>
-                        <Col xs={12} className="d-flex justify-content-center">
-                            <Form className="w-100">
-                                <InputGroup>
-                                    <Form.Control type="text" placeholder="Temple Name" className="rounded-0 "></Form.Control>
-                                    <InputGroup.Text className="rounded-0"><MdOutlineSearch className="fs-4" /></InputGroup.Text>
-                                </InputGroup>
-                            </Form>
-                        </Col>
-                    </Row>
-                </Col>
-                <Col xs={4} className="border ">
-                    <Row className="d-flex justify-content-evenly align-items-center">
-                        <Col xs={8} className="d-flex justify-content-center">
-                        <h6 className="mt-2">Temple Location</h6>
-                        </Col>
-                        <Col xs={4} className="d-flex justify-content-evenly align-items-center">
-                        <Dropdown>
-                            <Dropdown.Toggle className="text-muted border-0 bg-body">
-                           
-                            </Dropdown.Toggle>
+            <Row className="border shadow-bottom px-2 m-2 py-2 rounded-2 shadow mb-3">
+                <Col>
+                    <Form className="d-flex">
 
-                            <Dropdown.Menu>
-                                <Dropdown.Item href="#/action-1">Delhi</Dropdown.Item>
-                                <Dropdown.Item href="#/action-2">Uttar Pardesh</Dropdown.Item>
-                                <Dropdown.Item href="#/action-3">Pune</Dropdown.Item>
-                                <Dropdown.Item href="#/action-3">Mumbai</Dropdown.Item>
-                            </Dropdown.Menu>
-                        </Dropdown>
-                       </Col>
-                    </Row>
-                </Col>
-                <Col xs={3} className="d-flex justify-content-center border border ">
-                    <Row className="d-flex justify-content-evenly align-items-center">
-                        <Col xs={9} className="d-flex justify-content-center">
-                        <h6 className="mt-2">Your Location</h6>
-                        </Col>
-                        <Col xs={3} className="d-flex justify-content-evenly align-items-center">
-                        <Dropdown>
-                            <Dropdown.Toggle className="text-muted border-0 bg-body"></Dropdown.Toggle>
+                        <Form.Group className="col">
+                            <InputGroup>
+                                <Form.Control type="text" placeholder="Temple Name" className="rounded-0" style={{ height: 38 }}></Form.Control>
+                                <InputGroup.Text className="rounded-0"><MdOutlineSearch className="fs-4" /></InputGroup.Text>
+                            </InputGroup>
+                        </Form.Group>
+                        <Form.Group className="col">
+                            <ReactSelect options={locationsOptions} isClearable={true} placeholder="Select Temple Location" className="rs-rounded-0" />
+                        </Form.Group>
+                        <Form.Group className="col">
+                            <ReactSelect options={locationsOptions} isClearable={true} placeholder="Select Your Location" className="rs-rounded-0" />
+                        </Form.Group>
+                        <Form.Group className="col-1">
+                            <Button variant="accent" className="w-100 rounded-0" style={{ height: 38 }}><MdOutlineSearch className="fs-4 " /></Button>
+                        </Form.Group>
 
-                            <Dropdown.Menu>
-                                <Dropdown.Item href="#/action-1">Delhi</Dropdown.Item>
-                                <Dropdown.Item href="#/action-2">Uttar Pardesh</Dropdown.Item>
-                                <Dropdown.Item href="#/action-3">Pune</Dropdown.Item>
-                                <Dropdown.Item href="#/action-3">Mumbai</Dropdown.Item>
-                            </Dropdown.Menu>
-                        </Dropdown>
-                       </Col>
-                    </Row>
-                    
-                </Col>
-                <Col xs={1} className=" btn btn-accent rounded-0 d-flex justify-content-center align-items-center border border ">
-                    <MdOutlineSearch className="fs-4 " />
+                    </Form>
                 </Col>
             </Row>
 
             <Row>
                 <Col xs={12} className="gap-3 count-3 mossonary">
-                    {shuffle(images).map((image, k) => <GalleryItem image={image} name="Hanuman Mandir" loaction="Faridabad,Haryana" onClick={handleShow} key={k} />)}
-                    {shuffle(images).map((image, k) => <GalleryItem image={image} name="Prem Mandir" loaction="Faridabad,Haryana" onClick={handleShow} key={k} />)}
-                    {shuffle(images).map((image, k) => <GalleryItem image={image} name="Ram Mandir" loaction="Faridabad,Haryana" onClick={handleShow} key={k} />)}
+                    {shuffle(images).map((image, k) => <GalleryItem image={image} name="Hanuman Mandir" loaction="Delhi" onClick={handleShow} key={k} />)}
+                    {shuffle(images).map((image, k) => <GalleryItem image={image} name="Prem Mandir" loaction="Delhi" onClick={handleShow} key={k} />)}
+                    {shuffle(images).map((image, k) => <GalleryItem image={image} name="Ram Mandir" loaction="Delhi" onClick={handleShow} key={k} />)}
 
                 </Col>
             </Row>
@@ -204,10 +178,16 @@ export default function Temple() {
                                         </div>
 
                                     </Col>
-                                    <Col xs={2}>
-                                        <div className="mx-4 my-3">
-                                            <Link className="text-body mx-4"> <MdMoreHoriz /> </Link>
-                                        </div>
+                                    <Col xs={2}className="d-flex justify-content-center align-items-center">
+                                        <Dropdown>
+                                            <Dropdown.Toggle className="d:after-none btn-none">
+                                                <MdMoreHoriz />
+                                            </Dropdown.Toggle>
+
+                                            <Dropdown.Menu>
+                                               <Link to="/edit_post" className="dropdown-item dropdown-bg:active-none"> Edit Post</Link>
+                                            </Dropdown.Menu>
+                                        </Dropdown>
                                     </Col>
                                 </Row>
                             </div>

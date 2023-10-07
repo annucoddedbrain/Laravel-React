@@ -39,5 +39,15 @@ $utilities: (
         zoom-in,
         zoom-out
         )
+    ),
+
+    "text-align": (
+        property: "text-align",
+        class: "text",
+        values: (
+            right,
+            left,
+            center
+        )
     )
 );
