@@ -186,7 +186,7 @@ export default function Profile() {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <Col xs={12} className="d-flex align-items-center justify-content-center h5 text-muted wtu border-2 border-bottom">
+                                        <Col xs={12} className="d-flex align-items-center justify-content-center h6 text-muted wtu border-2 border-bottom">
                                             <Card.Text>
                                                 Are you want to upload something ?
                                             </Card.Text>
