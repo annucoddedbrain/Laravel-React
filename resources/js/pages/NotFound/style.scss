@@ -58,7 +58,7 @@
     }
     h2 {
       font-size: clamp(3vw, 7vw, 100px);
-    
+
       color: transparent;
       text-shadow: 2px 2px 0 red, -2px -2px 0 green, 6px 0 0 violet, -6px 0 0 yellow,
         0 -6px 0 aqua, 0 6px 0 yellowgreen;
@@ -69,9 +69,9 @@
       margin: 0;
       line-height: clamp(5vw, 10vw, 150px);
     }
-  }
-  
-  
+
+
+
   body .material-symbols-outlined {
     font-size: clamp(10vw, 20vw, 300px);
     text-shadow: 2px 2px 0 red, -2px -2px 0 green, 6px 0 0 violet, -6px 0 0 yellow,
